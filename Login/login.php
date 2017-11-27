@@ -13,9 +13,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
     header("Location: ..\\success.php");
 }
 if (isset($_POST['login'])) {
-
     if (isset($_POST['username']) && isset($_POST['password'])) {
-
         #return false = username does not exist;
         $check = $database ->checkusername($_POST['username']);
         if (!$check){
@@ -23,7 +21,6 @@ if (isset($_POST['login'])) {
             $errorfound = true;
             return;
         }
-
         #login() returns NULL when passwords don't match
 
         $userid = $database -> login($_POST['username'], $_POST['password']);
@@ -93,10 +90,7 @@ if (isset($_POST['register'])){
 
                         <button name="login">login</button>
                         <p class="message">Not registered? <a href="#" id="login-change" onclick="swapform();">Create an account</a></p>
-
                     </form>
-
-
                 </div>
                 <script type="text/javascript" src="javascript.js"></script>
             </div>

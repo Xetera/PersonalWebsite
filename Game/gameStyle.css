@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica !important ;
+    font-family: "Roboto", sans-serif !important ;
     font-size: 20px;
 }
 html {
@@ -8,52 +8,69 @@ html {
 }
 body{
     background: linear-gradient(45deg, #2f7a84, #2a5d84) no-repeat;
+    padding: 5px;
+    overflow-y: scroll;
 }
+.group {
+    display: none;
+}
+
 .glow {
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 1));
     -webkit-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
-.glow:hover {
-    -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
+.afterglow {
+
 }
+
 
 .icon {
     width: auto;
     height: auto;
     max-width: 56px;
 }
-
-#resourceIncrement{
-    float: right;
-    position: relative;
-    margin-top: auto;
+.smallicon {
+    width: auto;
+    height: auto;
+    max-width: 36px;
+    max-height: 36px;
 }
+#allResources {
+    position: relative;
+}
+/*
+#resourceIncrement{
+    float: left;
+    position: relative;
+    margin-top: -10px;
+    bottom: 23px;
+}
+*/
+#resources { /* I have no fucking clue what I'm doing */
+    margin-top: -22px;
+}
+
 #resourceCounter {
     float: left;
     vertical-align: top;
     margin-right: 10px;
-    margin-top: 23px;
     min-width: 350px;
 }
 
 #generators{
     position: relative;
     float: left;
-    margin-top: 10px;
+    margin-top: 20px;
+    right: 10px;
     display: inline-block;
 }
-/*
-#upgrades {
-    width: 400px;
-    height: 100%;
-    background-color: black;
-    display: inline-block;
-    float: right;
-    position: fixed;
+
+#generators{
+    margin-left: 10px;
 }
-*/
+
 p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 56px; text-indent: 30px; margin: 0; }
 
 .table {
@@ -62,32 +79,88 @@ p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16
     background: linear-gradient(#2a5071, #2e4161);
     box-shadow: 1px 2px 10px #111a24 inset;
 }
+
 div {
     display: inline;
 }
 
+#upgradesTableParent {
+    position:absolute;
+    right:0; top:0px; bottom: 00px;
+    width: 60px;
+    background: linear-gradient(#2156a5, #14254f);
+    border-left: solid 2px #0d221e;
+    box-shadow: 1px 0 10px #111a24 inset;
+}
+
+#upgradesTableParent #arrow {
+    position: inherit; /* I have no idea what I'm doing here lmao*/
+    top: 50%;
+    right: 40px;
+}
+
+#upgradesTableParent:hover {
+    width: 500px;
+    -webkit-transition: width 0.2s; /* Safari */
+}
+
+#upgradeTable tr {
+    -webkit-text-fill-color: white;
+    border: solid 2px purple;
+    background: #8e685b;
+    border-radius: 10px;
+    width: 100px;
+}
+
+#storyBoard {
+    right: 100px;
+    width: 300px;
+    top: 50%;
+    min-height: 500px;
+    float: right;
+    display: block;
+    position: relative;
+    border: inherit;
+    padding: 10px;
+    background-color: #203e5b;
+    border-radius: 10px;
+    overflow: visible;
+}
+
+#story #storyBoard div { /* this is where we give the text inside story format*/
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    padding: 10px;
+}
 
 #TODO {
     min-height: 300px;
     padding: 10px;
     border: solid 6px black;
     border-radius: 10px;
-    display: inline-block;
-    position: relative;
-    float: right;
-    top: 0;
-    right: 0;
+    float: left;
+    display: inline;
+    position: absolute;
+    bottom: 60px;
 }
+
 #footer {
+    float:left;
     display: block;
     position:absolute;
     bottom:0;
     width:100%;
     height:60px;   /* Height of the footer */
+    z-index: -10;
 }
+
 #footer .left {
     float:left;
 }
+
 #footer .right {
     float:right;
 }
@@ -95,11 +168,11 @@ div {
 
 
 
-
-
-
-
-
+#logout {
+    position: relative;
+    top: 700px;
+    margin-bottom: 30px;
+}
 .hot-container p { margin-top: 10px; }
 a { text-decoration: none; margin: 0 10px; }
 

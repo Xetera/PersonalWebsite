@@ -24,7 +24,7 @@ if (isset($_POST['logout'])){
         header("Location:Login\\login.php");
 }
 if (isset($_POST['game'])){
-    header("Location:Game\landing.php");
+    header("Location:Game\\landing.php");
 }
 
 ?>
