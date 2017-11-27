@@ -44,9 +44,12 @@ $database = new Database();
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <!-- SCRIPTS (order is important) -->
+
     <script language="javascript" src="Scripts/Resources.js"></script>
     <script language="javascript" src="Scripts/Buildings.js"></script>
     <script language="javascript" src="Scripts/Generators.js"></script>
+    <script language="javascript" src="Scripts/Empire.js"></script>
+    <script language="javascript" src="Scripts/Save.js"></script>
     <script language="javascript" src="Runtime.js"></script>
 </HEAD>
 <body>
@@ -140,8 +143,9 @@ $database = new Database();
             </tr>
         </table>
     </div>
-
-
+    <progress id="progress-bar" class="spawn" value="0" max="100">
+        10
+    </progress>
     <div id="rightBar">
         <div id="story">
             <div id="storyBoard" style="display: none">
@@ -172,8 +176,8 @@ $database = new Database();
     <div id="footer">
         <span id="TODO">
             TODO: <br/>
-            <strike>*Fix stone</strike><br/>
-            *Implement saving <br/>
+            *Change worker-buying to interval based worker spawning<br/>
+            <strike>*Implement saving</strike><br/>
             *Create a summer-winter cycle with events<br/>
             *Make a housing system that controls population<br/>
             *Something to make getting food harder like seasons <br/>

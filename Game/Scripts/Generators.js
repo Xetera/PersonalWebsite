@@ -5,6 +5,7 @@ class Generator {
         this.mult = multiplier;
         this.cost = cost;
         this.shown = false; // all generators start off hidden
+        this.displayTutorial = true;
     }
 }
 

@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8bf16d-a5dc-4a49-82ee-cfe7e6d58ca6" name="Default" comment="f">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/Runtime.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/Scripts/Buildings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/Scripts/Generators.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/Scripts/Resources.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/Scripts/Upgrades.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Game/Game.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Game/gameScript.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/Scripts/Save.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Game/Scripts/People.js" afterPath="$PROJECT_DIR$/Game/Scripts/Empire.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/Runtime.js" afterPath="$PROJECT_DIR$/Game/Runtime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/Scripts/Generators.js" afterPath="$PROJECT_DIR$/Game/Scripts/Generators.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/Scripts/Resources.js" afterPath="$PROJECT_DIR$/Game/Scripts/Resources.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/gameStyle.css" afterPath="$PROJECT_DIR$/Game/gameStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/landing.php" afterPath="$PROJECT_DIR$/Game/landing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Login/login.php" afterPath="$PROJECT_DIR$/Login/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/success.php" afterPath="$PROJECT_DIR$/success.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="landing.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="landing.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game/landing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="180" column="67" lean-forward="false" selection-start-line="180" selection-start-column="67" selection-end-line="180" selection-end-column="67" />
+            <state relative-caret-position="294">
+              <caret line="178" column="67" lean-forward="false" selection-start-line="178" selection-start-column="67" selection-end-line="178" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#body#0;n#HTML#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#body#0;n#HTML#0;n#!!top" expanded="true" />
@@ -71,25 +61,13 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
-                <marker date="1511740692650" expanded="true" signature="166:167" ph="..." />
-                <marker date="1511740692650" expanded="true" signature="166:202" ph="..." />
-                <marker date="1511740692650" expanded="true" signature="166:404" ph="..." />
-                <marker date="1511740692650" expanded="true" signature="166:411" ph="..." />
-                <marker date="1511740692650" expanded="true" signature="166:449" ph="..." />
-                <marker date="1511740692650" expanded="true" signature="941:982" ph="..." />
-                <marker date="1511740692650" expanded="true" signature="948:982" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runtime.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/Runtime.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1511790367940" expanded="true" signature="166:167" ph="..." />
+                <marker date="1511790367940" expanded="true" signature="166:202" ph="..." />
+                <marker date="1511790367940" expanded="true" signature="166:404" ph="..." />
+                <marker date="1511790367940" expanded="true" signature="166:411" ph="..." />
+                <marker date="1511790367940" expanded="true" signature="166:449" ph="..." />
+                <marker date="1511790367940" expanded="true" signature="941:982" ph="..." />
+                <marker date="1511790367940" expanded="true" signature="948:982" ph="..." />
               </folding>
             </state>
           </provider>
@@ -98,18 +76,28 @@
       <file leaf-file-name="Upgrades.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Upgrades.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            <state relative-caret-position="161">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resources.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/Scripts/Resources.js">
+      <file leaf-file-name="gameStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/gameStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="2847">
+              <caret line="153" column="24" lean-forward="false" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Runtime.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Runtime.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1306">
+              <caret line="237" column="111" lean-forward="false" selection-start-line="237" selection-start-column="111" selection-end-line="237" selection-end-column="111" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -117,21 +105,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generators.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
+      <file leaf-file-name="Save.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Scripts/Save.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="754">
+              <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="People.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/Scripts/People.js">
+      <file leaf-file-name="Generators.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="161">
+              <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Empire.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Scripts/Empire.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -147,12 +145,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameStyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/gameStyle.css">
+      <file leaf-file-name="Resources.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Scripts/Resources.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="437">
+              <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,8 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login-pag</find>
-      <find>display</find>
       <find>container</find>
       <find>salt</find>
       <find>searchvalue</find>
@@ -199,8 +197,10 @@
       <find>23p</find>
       <find>resourc</find>
       <find>resourceIncrement</find>
-      <find>logout</find>
       <find>glow</find>
+      <find>spawnInterval</find>
+      <find>logout</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace>logout</replace>
@@ -242,12 +242,14 @@
         <option value="$PROJECT_DIR$/Game/Scripts/tsconfig.json" />
         <option value="$PROJECT_DIR$/Game/Scripts/config.json" />
         <option value="$PROJECT_DIR$/Game/Scripts/People.js" />
-        <option value="$PROJECT_DIR$/Game/Scripts/Resources.js" />
-        <option value="$PROJECT_DIR$/Game/Scripts/Generators.js" />
-        <option value="$PROJECT_DIR$/Game/gameStyle.css" />
-        <option value="$PROJECT_DIR$/Game/landing.php" />
         <option value="$PROJECT_DIR$/Game/Scripts/Upgrades.js" />
+        <option value="$PROJECT_DIR$/Game/gameStyle.css" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Empire.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Resources.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Save.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Generators.js" />
         <option value="$PROJECT_DIR$/Game/Runtime.js" />
+        <option value="$PROJECT_DIR$/Game/landing.php" />
       </list>
     </option>
   </component>
@@ -268,7 +270,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1121" />
     <option name="y" value="-20" />
     <option name="width" value="1400" />
@@ -334,12 +336,6 @@
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Game" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="htdocs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Game" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -371,6 +367,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xamppnew/htdocs/Game/Scripts/Empire.js" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -393,8 +390,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.Buildings.js">
+  <component name="RunManager" selected="Node.js.Empire.js">
     <configuration name="Buildings.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Buildings.js" working-dir="$PROJECT_DIR$/Game/Scripts" />
+    <configuration name="Empire.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Empire.js" working-dir="$PROJECT_DIR$/Game/Scripts" />
     <configuration name="Resources.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="Resources.js" working-dir="$PROJECT_DIR$/Game/Scripts" />
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
@@ -406,18 +404,20 @@
     </configuration>
     <configuration name="gameScript.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/Game/Runtime.js" working-dir="$PROJECT_DIR$/Game" />
     <configuration name="landing.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htdocs/Game/landing.php" />
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Node.js.gameScript.js" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.landing.php" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.Resources.js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.Buildings.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.Empire.js" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.Buildings.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.Resources.js" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.landing.php" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.gameScript.js" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.Empire.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.Buildings.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.Resources.js" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.landing.php" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.gameScript.js" />
       </list>
     </recent_temporary>
   </component>
@@ -440,28 +440,28 @@
       <workItem from="1511489192689" duration="6238000" />
       <workItem from="1511542835834" duration="50497000" />
       <workItem from="1511671479570" duration="6630000" />
-      <workItem from="1511680381794" duration="23858000" />
+      <workItem from="1511680381794" duration="50872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175344000" />
+    <option name="totallyTimeSpent" value="202358000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12473348" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5021322" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.116145834" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39547414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39456522" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -476,13 +476,13 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.5021322" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3326087" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12473348" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.116145834" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -490,7 +490,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39547414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39456522" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,13 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Login/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Login/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -774,13 +767,13 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
-            <marker date="1511740692650" expanded="true" signature="166:167" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:202" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:404" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:411" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:449" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="941:982" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="948:982" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:167" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:202" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:404" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:411" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:449" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="941:982" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="948:982" ph="..." />
           </folding>
         </state>
       </provider>
@@ -862,30 +855,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Buildings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/People.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/gameStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/success.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -894,10 +863,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Resources.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Buildings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Save.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Empire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/gameStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2847">
+          <caret line="153" column="24" lean-forward="false" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Runtime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1306">
+          <caret line="237" column="111" lean-forward="false" selection-start-line="237" selection-start-column="111" selection-end-line="237" selection-end-column="111" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Upgrades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Game/landing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="180" column="67" lean-forward="false" selection-start-line="180" selection-start-column="67" selection-end-line="180" selection-end-column="67" />
+        <state relative-caret-position="294">
+          <caret line="178" column="67" lean-forward="false" selection-start-line="178" selection-start-column="67" selection-end-line="178" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#body#0;n#HTML#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#body#0;n#HTML#0;n#!!top" expanded="true" />
@@ -907,50 +944,14 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#2;n#body#0;n#HTML#0;n#!!top" expanded="true" />
-            <marker date="1511740692650" expanded="true" signature="166:167" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:202" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:404" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:411" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="166:449" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="941:982" ph="..." />
-            <marker date="1511740692650" expanded="true" signature="948:982" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:167" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:202" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:404" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:411" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="166:449" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="941:982" ph="..." />
+            <marker date="1511790367940" expanded="true" signature="948:982" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Runtime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Upgrades.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Resources.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -4,42 +4,28 @@
 *  to keep up, just like how it is in real life.
 *
 *  Also, if you're reading this congratz! You really know your inspect element.
-
-*  I copied civclicker's javascript code to begin with but it turns out this is a REALLYYY inefficient way to do things
-*  and it will lead me to repeat a lot of code because of a lack of inheritance
-
-*  TODO: switch to a more object oriented system where we can extend parents to be able to create entities more easily.
-*  TODO: Extending a building class to define the distinct properties of a hut and villa would help us.
-*  TODO: This also means that we will have to change the way that we do the calculations since we're gonna need to
-*  TODO: create instances of generators and resources but it's not a big deal because OOP best.
 */
-
 const tick = 100; // TODO: move consts to it's own file to load in the html header
+const second = 1000;
 
-let game = { // probably a useless obj but whatever
-    start: true
-};
-
-let population = {
-    total: 0,
-    sick: 0
-};
 
 // ------ initializing instances ---------
 
-let food = new Resource();
-let wood = new Resource();
-let stone = new Resource();
+let food = new Food(0);
+let wood = new Wood(0);
+let stone = new Stone(0);
 
 let farmer = new Farmer();
 let lumberjack = new Lumberjack();
+
+let empire = new Empire();
 
 
 function print(string){
     $("<div>"+ string + "<div>").appendTo('#storyBoard');
 
 }
-
+//----------------- functions------------------
 
 function addFarmer(amount){
     let priceOfFarmer = amount * (document.getElementById('farmerCost').innerHTML);
@@ -74,7 +60,7 @@ function addLumberjack(amount){
 function tickValue(a){
     // the game feels very laggy when it updates once a second so we want to make sure every value that we're
     // adding to the counter shows 1/10th of it's actual value but gets updated 10 times faster
-    let division = 1000/tick;
+    let division = second/tick;
     return a/division;
 }
 
@@ -108,11 +94,15 @@ function increment(material, type){
 
 }
 
+loadGame(empire, food, wood, stone, farmer, lumberjack);
 
 $(document).ready(function() {
     // here are the things that are going to run once the window loaded
-    //TODO: add save checking the first thing in here to not waste time (if it's not done server side)
+    //TODO: add save checking the first thing in here to not waste time
 
+
+
+    print("Hey! game saves are now a feature but expect your save data to get wiped as new features are added.");
     // ------- hovers -------
     $('#upgradesTableParent').hover(() => {
         $('#upgradeTable').show();
@@ -125,22 +115,21 @@ $(document).ready(function() {
         $('#upgradeTable').hide();
     });
 
-    // we will need to edit this so that it only saves the ones with the save data in it
-    // TODO: integrate game saving
+
+
 });
 
 
 window.setInterval(() => {
-    // the game runs on one big setInterval to avoid having to keep track of multiple
-    // intervals and possibly lagging the game later on. Every value that needs to be
-    // displayed in a 'per second' basis gets adjusted with tickValue() to convert it
-    // to the proper tick amount.
+    // the game runs on one big setInterval (except save) to avoid having to keep track
+    // of multiple intervals and possibly lagging the game later on. Every value that
+    // needs to be displayed in a 'per second' basis gets adjusted with tickValue()
+    // to convert it to the proper tick amount.
 
     // adjusting resources according to tick rate and multipliers
     food.total += tickValue(farmer.total * farmer.mult);
     wood.total +=  tickValue(lumberjack.total * lumberjack.mult);
     // stone here <----
-    // gold here <-----
 
     // TODO: keep in mind we don't want to lose our shit with resources, 3 or 4 sounds about right. The main focus
     // TODO: of the game will be to survive, not go up to crazy fucking numbers, we don't want to create a mindless idler
@@ -152,7 +141,7 @@ window.setInterval(() => {
     // ---- per second -------
     $('#foodPerSecond').html((farmer.total * farmer.mult).toFixed(1));
     $('#woodPerSecond').html((lumberjack.total * lumberjack.mult).toFixed(1));
-    //$('#stoneperSecond').html(miner.total * lumberjack.mult).toFixed(10));
+    //$('#stoneperSecond').html(miner.total * lumberjack.mult).toFixed(1);
 
     $('#farmerCount').html(farmer.total);
     $('#lumberjackCount').html(lumberjack.total);
@@ -184,13 +173,31 @@ window.setInterval(() => {
     // checking for game progress and showing items dynamically
 
 
+    //------------SPAWNING WORKERS --------------------
+    if (empire.population < empire.maxPopulation){
+        // we add 0.1 (tick/second) since that's the tick we're running on
+        // this way every time we loop over this it it adds a little bit of progress
+        empire.spawnProgress += tick/second;
+        // stupid float math throws us off here, we want to see if the spawn progress is equal to spawn interval
+        let spawnProgress = parseFloat(empire.spawnProgress).toFixed(1);
+        let spawnInterval = parseFloat(empire.spawnInterval).toFixed(1);
+        empire.percentSpawnProgress = parseFloat((spawnProgress/spawnInterval)*100).toFixed(1);
+
+        $('#progress-bar').val(empire.percentSpawnProgress); // changes the progress bar value accordingly
+        if (spawnProgress === spawnInterval){
+            print("Citizen spawned");
+            empire.population++;
+            empire.spawnInterval = parseFloat(empire.spawnInterval * 1.1).toFixed(1);
+            empire.spawnProgress = 0;
+        }
+    }
+
 
     // ------- generator showing --------
-    if (food.total > 9 && farmer.shown===false) {
+    if ((food.total > 9 && !$('#storyBoard').is(":visible"))) {
         $('#storyBoard').show();
         $('#generators').show();
         $('#farmerGroup').show(1000);
-        print("Looks like this skill is gonna be really important, I better teach some other people how to do it.")
         farmer.shown = true;
 
     }
@@ -211,6 +218,24 @@ window.setInterval(() => {
         $('#stoneRow').show(1000);
         $('#stoneIncrementer').show(1000);
     }
-},100); // not refreshed at 60 fps but whatever who cares
+},tick); // 10 fps boysss
 
+
+
+// ------ AUTOMATIC GAME SAVING --------
+setInterval(function (){
+    // here instead of having a crazy mindfuck of values all we have to do is list properties in our
+    // instances and save them in a loop
+    saveGame();
+    // copy this template and replace empire for every instance running, other things should be unnecessary
+
+
+    // at the end
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    print("Game saved! [" + hour + ":" + minute + "]");
+    // TODO: add a way to check whether the last div was a save message, if so just update the time to not spam
+
+}, 120000); // every 5 minutes
 

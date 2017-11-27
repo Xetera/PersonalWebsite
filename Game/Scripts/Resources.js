@@ -3,9 +3,23 @@
 * of working with large amount of ojects, no clutter
 */
 
-class Resource {
-    constructor(){
-        this.total = 0;
+class Food {
+    constructor(total){
+        this.total = total;
+        this.increment = 1;
+    }
+}
+
+class Wood {
+    constructor(total){
+        this.total = total;
+        this.increment = 1;
+    }
+}
+
+class Stone {
+    constructor(total){
+        this.total = total;
         this.increment = 1;
     }
 }

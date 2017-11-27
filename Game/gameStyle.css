@@ -146,7 +146,16 @@ div {
     position: absolute;
     bottom: 60px;
 }
-
+progress.spawn {
+    -webkit-appearance: none;
+    appearance: none;
+    float: left;
+    border: 5px grey;
+    border-radius: 10px;
+}
+progress.spawn::-webkit-progress-value{
+    background: #43A047;
+}
 #footer {
     float:left;
     display: block;
