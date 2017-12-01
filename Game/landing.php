@@ -32,30 +32,33 @@ $database = new Database();
 <!DOCTYPE html>
 <HTML>
 <HEAD>
-    <!-- HEAD --->
+    <!-- META DATA --->
+    <meta charset="UTF-8">
     <link rel="icon" href="images/colloseum.png">
-    <title>Sexy Title Here</title>
+    <title>An Empire Through Time</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="gameStyle.css">
 
     <!-- DEPENDENCIES-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="jquery.qtip.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-    <!-- SCRIPTS (order is important) -->
-
+    <!-- GAME FILES -->
     <script language="javascript" src="Scripts/Resources.js"></script>
     <script language="javascript" src="Scripts/Buildings.js"></script>
     <script language="javascript" src="Scripts/Generators.js"></script>
     <script language="javascript" src="Scripts/Empire.js"></script>
+    <script language="javascript" src="Scripts/Upgrades.js"></script>
     <script language="javascript" src="Scripts/Save.js"></script>
     <script language="javascript" src="Runtime.js"></script>
 </HEAD>
 <body>
     <div id="allResources">
     <div id="divResourceCounter">
-    <table id="resourceCounter" class="table" cellspacing="1" cellpadding="10">
+    <table id="resourceCounter" class="table" cellspacing="1" cellpadding="7">
         <tr id="foodRow">
             <td>
                 <img src="images/wheat.png" onclick="increment('food','click');" class="icon">
@@ -87,7 +90,7 @@ $database = new Database();
     <!-- RESOURCES -->
     <br/>
     <div id="divResourceIncrement">
-        <table id="resources" class="table" cellspacing="1" cellpadding="10">
+        <table id="resources" class="table" cellspacing="1" cellpadding="7">
             <tr id="foodIncrementer">
                 <td>
                     <img id="wheatIcon" class="icon" src="images/sickle.png">
@@ -116,78 +119,129 @@ $database = new Database();
     </div>
     </div>
     <div id="divGenerators" >
-        <table id="generators" class="table" cellspacing="1" cellpadding="10" style="display: none">
+        <table id="generators" class="table" cellspacing="1" cellpadding="10">
+            <tr id="hunterGroup">
+                <td>
+                    <img id="hunterIcon" class="icon" src="images/archery.png">
+                </td>
+                <td>Hunter</td>
+                <td>
+                    <a class="btn btn-blue genBtn" href="#" id="removeHunter" onmousedown="hunter.remove(1)"> < </a>
+                </td>
+                <td id="hunterCount"></td>
+                <td>
+                    <a class="btn btn-blue genBtn" href="#" id="addHunter" onmousedown="hunter.add(1)"> > </a>
+                </td>
+            </tr>
             <tr id="farmerGroup" class="group">
                 <td>
                     <img id="farmerIcon" class="icon" src="images/farmer.png" >
                 </td>
                 <td>
-                    <a class="btn btn-blue genBtn" href="#" id="addFarmer" onmousedown="addFarmer(1)">Get Farmer</a>
+                    <a class="btn btn-blue genBtn" href="#" id="addFarmer" onmousedown="farmer.add(1)">Get Farmer</a>
                 </td>
                 <td>Cost</td>
                 <td id="farmerCost">10</td>
                 <td>Farmers:</td>
                 <td id="farmerCount">0 </td>
             </tr>
-            <tr id="lumberjackGroup" class="group">
+            <tr id="lumberjackGroup">
                 <td>
-                    <img class="icon" id="lumberjackIcon" src="images/lumberjack.png">
+                    <img id="lumberjackIcon" class="icon" src="images/lumberjack.png">
+                </td>
+                <td>Lumberjack</td>
+                <td>
+                    <a class="btn btn-blue genBtn" href="#" id="removeLumberjack" onmousedown="lumberjack.remove(1)"> < </a>
+                </td>
+                <td id="lumberjackCount"></td>
+                <td>
+                    <a class="btn btn-blue genBtn" href="#" id="addLumberjack" onmousedown="lumberjack.add(1)"> > </a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="populationCounter">
+        <img src="images/population.png" class="icon" style="margin-left: 50%; margin-right: 50%;">
+        <br/>
+        <progress id="progress-bar" class="spawn" value="0" max="100"></progress><br/>
+        <span>Population:
+            <span id="population"></span>
+                <span>/
+                    <span id="maxPopulation"></span><br/>
+                    <button id="toggleAutoAssign" onmousedown="toggleAutoAssign();">Turn off Autoassign</button>
+                </span>
+            </span>
+    </div>
+    <br/>
+    <!-- Housing -->
+    <div id="housingArea" >
+        <table id="housingTable" class="table" cellspacing="5" cellpadding="5">
+            <tr id="tentRow">
+                <td>
+                    <img class="icon" id="tentIcon" src="images/tent.png">
                 </td>
                 <td>
-                    <a class="btn btn-blue genBtn" href="#" id="addLumberjack" onmousedown="addLumberjack(1)">Get Lumberjack</a>
+                    <a class="btn btn-blue genBtn" href="#" id="buyTent" onmousedown="buyTent(1);">Build a Tent</a>
                 </td>
-                <td>Cost</td>
-                <td id="lumberjackCost">0</td>
-                <td>Lumberjacks:</td>
-                <td id="lumberjackCount">0</td>
+                <td>
+                    <div class="buildingCostHolder">
+                        <img class="smallicon" src="images/wheat.png"><div class="buildingCost" id="tentFoodCost">10</div>
+                    </div>
+                    <br/>
+                    <div class="buildingCostHolder">
+                        <img class="smallicon" src="images/log.png"><div class="buildingCost" id="tentWoodCost">10</div>
+                    </div>
+                </td>
             </tr>
         </table>
     </div>
-    <progress id="progress-bar" class="spawn" value="0" max="100">
-        10
-    </progress>
-    <div id="rightBar">
-        <div id="story">
-            <div id="storyBoard" style="display: none">
+    <div id="housingDisplay">
+        <table id="housingDisplayTable" class="table" cellspacing="5" cellpadding="5">
+            <tr id="tentRow">
+                <td>
+                    <img class="icon" id="tentIcon" src="images/tent.png">
+                </td>
+               <td id="tentCount"></td>
+            </tr>
+        </table>
+    </div>
 
-            </div>
+    <div id="storyBoard" class="scrollbar">
+
+        <div class="force-overflow"></div>
+
+    </div>
+    <div id="rightBar">
+
+
         </div>
         <div id="upgradesTableParent" class="glow">
             <img src="images/left-arrow.png" id="arrow" class="smallicon">
-            <table id="upgradeTable" cellpadding="12" cellspacing="10" style="display: none">
-                <tr class="rowStyle">
-                    <td>
-                        Hello Placeholder!
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Upgrades will Be placed here
-                    </td>
-
-                </tr>
-
+            <table id="upgradeTable" cellpadding="12" cellspacing="0" style="display: none">
             </table>
             <form method="post">
-                <button id="logout" style="display: none;" name="logout"> Logout </button>
+                <button id="logout" class="btn btn-blue genBtn" style="display: none;" name="logout"> Logout </button>
+                <button onmousedown="localStorage.clear();">Reset Game</button>
             </form>
         </div>
-    </div>
+    <a class="btn btn-blue genBtn" href="#" style="display: none;" onmousedown="notification();">Notification!</a>
     <div id="footer">
         <span id="TODO">
             TODO: <br/>
             *Change worker-buying to interval based worker spawning<br/>
             <strike>*Implement saving</strike><br/>
             *Create a summer-winter cycle with events<br/>
-            *Make a housing system that controls population<br/>
+            <strike>*Make a housing system that controls population</strike><br/>
             *Something to make getting food harder like seasons <br/>
             <strike>*Put a hoverable upgrade tab on the right side</strike><br/>
-            <strike>*Make new resources appear dynamically</strike> <br/>
+            *Convert numbering system to ENG notation <br/>
             <strike>*Logout button to get back to login</strike><br/>
             *Header for game name and other things<br/>
             *Possibly migrate resources to header?<br/>
             *Happiness system<br/>
             <strike>*Switch to OOP</strike><br/>
+            *Move everything to Bootstrap
         </span>
 
         <p class="left">[Created by Xetera]</p>

@@ -6,7 +6,12 @@ $database = new Database();
 
 
 if (isset($_SESSION['loggedin'])) {
-    #echo $_SESSION['hello'];
+    // logging IP address
+    if (!empty($_SERVER['REMOTE_ADDR']))   //check ip from share internet
+    {
+        $_SESSION['IP'] = $_SERVER['REMOTE_ADDR'];
+    }
+
     $userid = &$_SESSION['userid'];
 
     $username = $database -> singlesearchDatabase($userid, 'id', 'username');

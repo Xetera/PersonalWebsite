@@ -1,0 +1,10 @@
+Any unassigned villager could be unemployed and they could be we creating research which would let use use upgrades
+We can then later have things like schools (as upgrades) which would increase the amount of research our unemployed
+people create.
+
+Since this is supposed to resemble the creation of civilizations we will keep farmer multipliers to 1 which means
+that they will be producing the same amount of food that they eat, essentially being useless. This will prevent
+players from assigning workers to other jobs, just like how it was in prehistory. The only time we started to have
+innovation was after the start of agriculture where people started to be able to specilize in other fields and there
+was a food surplus.
+

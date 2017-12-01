@@ -1,6 +1,6 @@
 * {
     font-family: "Roboto", sans-serif !important ;
-    font-size: 20px;
+    font-size: 18px;
 }
 html {
     min-height: 100%;
@@ -9,10 +9,20 @@ html {
 body{
     background: linear-gradient(45deg, #2f7a84, #2a5d84) no-repeat;
     padding: 5px;
-    overflow-y: scroll;
+    min-height: 100%;
 }
 .group {
     display: none;
+}
+
+.notification {
+    border: 2px black;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 1px 2px 10px #111a24 inset;
+    text-align:center;
+    vertical-align: middle;
+    line-height: 90px;
 }
 
 .glow {
@@ -21,9 +31,52 @@ body{
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
-.afterglow {
-
+.buildingCostHolder {
+    background: 40px #8d7d9c;
+    margin: 1px;
+    padding: 3px;
+    border-radius: 10px;
+    display: inline-block;
 }
+
+.buildingCost {
+    font-family: Marlett;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+td a {
+    display: block;
+    border: 1px solid black;
+    padding: 16px;
+}
+td a:active {
+    color: black;
+}
+.gameTooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;                    /* Width and Height are fixed */
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
 
 
 .icon {
@@ -34,9 +87,22 @@ body{
 .smallicon {
     width: auto;
     height: auto;
-    max-width: 36px;
-    max-height: 36px;
+    max-width: 28px;
+    max-height: 28px;
+    vertical-align: middle;
 }
+.mediumIcon {
+    width: auto;
+    height: auto;
+    max-width: 28px;
+    max-height: 28px;
+    vertical-align: middle;
+}
+
+.smallicon .disabled {
+    -webkit-filter: grayscale(1); /* Webkit */
+}
+
 #allResources {
     position: relative;
 }
@@ -51,6 +117,13 @@ body{
 #resources { /* I have no fucking clue what I'm doing */
     margin-top: -22px;
 }
+#populationCounter {
+    right: 100px;
+    top: 0;
+    float: right;
+    display: inline-block;
+    position: absolute;
+}
 
 #resourceCounter {
     float: left;
@@ -61,21 +134,21 @@ body{
 
 #generators{
     position: relative;
-    float: left;
+
     margin-top: 20px;
-    right: 10px;
-    display: inline-block;
+    left: 0;
 }
 
-#generators{
-    margin-left: 10px;
+#housingDisplay{
+    position: fixed;
+    top: 20px;
+    right: 310px;
 }
-
 p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 56px; text-indent: 30px; margin: 0; }
 
 .table {
     border: 5px solid #094f54;
-    border-radius: 10px;
+    border-radius: 6px;
     background: linear-gradient(#2a5071, #2e4161);
     box-shadow: 1px 2px 10px #111a24 inset;
 }
@@ -110,30 +183,25 @@ div {
     background: #8e685b;
     border-radius: 10px;
     width: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+#upgradeTable tr:hover {
+    cursor: pointer;
 }
 
 #storyBoard {
-    right: 100px;
     width: 300px;
-    top: 50%;
-    min-height: 500px;
-    float: right;
-    display: block;
-    position: relative;
-    border: inherit;
+    height: 500px;
+    max-height: 500px;
+    position: fixed;
     padding: 10px;
+    top: calc(50% - 250px);
+    left: 78%;
+    border: solid 5px #8af0c6;
     background-color: #203e5b;
     border-radius: 10px;
-    overflow: visible;
-}
-
-#story #storyBoard div { /* this is where we give the text inside story format*/
-    display: inline-block;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    border: none;
-    padding: 10px;
+    overflow-y: scroll;
 }
 
 #TODO {
@@ -146,6 +214,7 @@ div {
     position: absolute;
     bottom: 60px;
 }
+
 progress.spawn {
     -webkit-appearance: none;
     appearance: none;
@@ -156,6 +225,7 @@ progress.spawn {
 progress.spawn::-webkit-progress-value{
     background: #43A047;
 }
+
 #footer {
     float:left;
     display: block;
@@ -174,14 +244,35 @@ progress.spawn::-webkit-progress-value{
     float:right;
 }
 
-
-
-
 #logout {
     position: relative;
     top: 700px;
     margin-bottom: 30px;
 }
+
+#storyBoard::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+    left bottom,
+    left top,
+    color-stop(0.23, rgb(28,58,148)),
+    color-stop(0.72, rgb(73,125,189)),
+    color-stop(0.86, rgb(28,58,148)));
+}
+#storyBoard::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+#storyBoard::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
 .hot-container p { margin-top: 10px; }
 a { text-decoration: none; margin: 0 10px; }
 
@@ -195,10 +286,10 @@ a { text-decoration: none; margin: 0 10px; }
 a.btn {
     display: inline-block;
     color: #666;
-    background-color: #eee;
+    background-color: #a4adb2;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px 30px;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -207,11 +298,14 @@ a.btn {
     border-bottom-width: 3px;
     overflow: hidden;
 }
+
 a.btn:hover {
     background-color: #e3e3e3;
     border-color: rgba(0,0,0,0.5);
 }
-
+.disabled, .disabled:hover {
+    background-color: gray;
+}
 a.btn:active {
     background-color: #CCC;
     border-color: rgba(0,0,0,0.9);

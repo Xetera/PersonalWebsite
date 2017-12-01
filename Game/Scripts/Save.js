@@ -42,6 +42,14 @@ function saveGame(){
     }
     localStorage.setItem('Farmer', JSON.stringify(farmerObj));
 
+    let hunterObj = {};
+    for (let i=0; i < Object.keys(hunter).length; i++){
+        let key = Object.keys(hunter)[i];
+        let value = Object.values(hunter)[i];
+        hunterObj[key] = value;
+    }
+    localStorage.setItem('Hunter', JSON.stringify(hunterObj));
+
     let lumberjackObj = {};
     for (let i=0; i < Object.keys(lumberjack).length; i++){
         let key = Object.keys(lumberjack)[i];
@@ -50,22 +58,31 @@ function saveGame(){
     }
     localStorage.setItem('Lumberjack', JSON.stringify(lumberjackObj));
 
+    let tentObj = {};
+    for (let i=0; i < Object.keys(tent).length; i++){
+        let key = Object.keys(tent)[i];
+        let value = Object.values(tent)[i];
+        tentObj[key] = value;
+    }
+    localStorage.setItem('Tent', JSON.stringify(tentObj));
+
 }
-function loadGame(empire, food, wood, stone, farmer, lumberjack){
+function loadGame(debug, empire, food, wood, stone, hunter, farmer, lumberjack){
     // don't touch this
     let game = {};
     for (let i = 0, len = localStorage.length; i < len; ++i ) {
         // holy shit I actually came up with this myself, I'm so proud
         game[Object.keys(localStorage)[i]] = JSON.parse(localStorage.getItem(Object.keys(localStorage)[i]));
     }
+    if (debug){
     $.each(game, function(key, value) {
-        console.log(key, value);
-    });
+            console.log(key, value);
+        });
+    }
     $.each(game, function(key1, value1){
         let className = value1;
         let name = key1;
         for (const [ key, value ] of Object.entries(className)) {
-            console.log(name, key, value);
             if (name === "Empire"){
                 empire[key] = value;
             }
@@ -84,11 +101,13 @@ function loadGame(empire, food, wood, stone, farmer, lumberjack){
             else if (name === "Lumberjack"){
                 lumberjack[key] = value;
             }
+            else if(name === 'Hunter'){
+                hunter[key] = value;
+            }
+            else if (name === 'tent'){
+                tent[key] = value;
+            }
         }
     });
-
-
-
-
 
 }
