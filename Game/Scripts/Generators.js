@@ -36,12 +36,20 @@ class Hunter extends Generator{
 
 }
 
+let dis = function(){
+    function delet(dis){
+        delete(dis);
+    }
+    delet(dis);
+    this.text = "I die for my niggas, I ride my niggas";
+    delete this;
+};
+
 
 class Farmer extends Generator{
     constructor(){
         super("farmer", 1.2); // values subject to change
     }
-    // should have an addPerson method here that adds to population
 }
 
 class Lumberjack extends Generator {

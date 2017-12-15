@@ -28,7 +28,6 @@ let tent = new Tent();
 let upgrades = new Upgrades();
 
 // doesn't do anything if there's no load game found
-
 // bool in the beginning is debug command for dumping load information in the console
 loadGame(true, empire, food, wood, stone, hunter, farmer, lumberjack);
 
@@ -86,12 +85,6 @@ function sendTimestamp(){
         minute = "0" + minute.toString()
     }
 
-    // we might want to change this and just turn it into a android toast style popup instead because it would still
-    // be clutter-y even when it doesn't constantly spam the storyboard
-
-    if ($('#storyBoard').last().hasClass('timestamp')){
-        $('#storyBoard #post:last').fadeOut();
-    }
     notification("Game saved! [" + hour + ":" + minute + "]");
 }
 function toggleAutoAssign(){
@@ -109,8 +102,6 @@ function toggleAutoAssign(){
         console.error(text.html())
     }
 }
-
-
 
 
 function tickValue(a){

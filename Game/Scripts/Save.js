@@ -75,10 +75,10 @@ function loadGame(debug, empire, food, wood, stone, hunter, farmer, lumberjack){
         game[Object.keys(localStorage)[i]] = JSON.parse(localStorage.getItem(Object.keys(localStorage)[i]));
     }
     if (debug){
-    $.each(game, function(key, value) {
-            console.log(key, value);
-        });
-    }
+        $.each(game, function(key, value) {
+                console.log(key, value);
+            });
+        }
     $.each(game, function(key1, value1){
         let className = value1;
         let name = key1;
