@@ -1,6 +1,6 @@
 let whatis = 1000;
 function toTheRover(){
-    $.post('Rover.php', {data: "hey"})
+    $.post('Gallery.php', {data: "hey"})
         .done(function(response) {
             console.log(response);
             $('#textarea').html(response);
@@ -9,9 +9,10 @@ function toTheRover(){
 }
 
 function pictures(){
-    $.post('Rover.php', {pageNumber:1})
+    $.post('Gallery.php', {pageNumber:1})
         .done(function(response){
-            console.log(response)
+            console.log(response);
+            $('#textarea').html(response);
             //addPicture()
         })
 }

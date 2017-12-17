@@ -1,5 +1,6 @@
 <?php
-require_once("Rover.php");
+session_start();
+require_once("Gallery.php");
 
 
 
