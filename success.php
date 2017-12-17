@@ -32,6 +32,10 @@ if (isset($_POST['game'])){
     header("Location:Game\\landing.php");
 }
 
+if (isset($_POST['rover'])){
+    header("Location:Rover\\index.php");
+}
+
 ?>
 
 <!Doctype HTML>
@@ -47,6 +51,7 @@ if (isset($_POST['game'])){
                 <h1> <?php echo $log ?> </h1>
                 <button type="submit" name="logout" value="logout">Logout</button>
                 <button type="submit" name="game" value="game"> Go to Game </button>
+                <button type="submit" name="rover" value="rover">Go to Rover</button>
             </form>
         </div>
     </body>

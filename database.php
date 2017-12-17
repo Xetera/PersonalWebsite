@@ -6,8 +6,7 @@ class Database
     protected $database;
     public $conn;
 
-    function __construct()
-    {
+    function __construct() {
         #establishing connection with the database
         $this->conn = mysqli_connect(databaseHost, mySqlUsername, mySqlPassword, databaseName)
         or die ("Couldn't connect.");
@@ -28,8 +27,7 @@ class Database
 
     }
 
-    function register($username, $password, $email)
-    {
+    function register($username, $password, $email) {
         #replacing input with escaped strings to prevent injection
         $escapedusername = mysqli_escape_string($this->conn, $username);
         $escapedpassword = mysqli_escape_string($this->conn, $password);
@@ -49,15 +47,14 @@ class Database
 
     }
 
-    function hash($password)
-    {
+    function hash($password) {
 
         $hash = password_hash($password, PASSWORD_BCRYPT);
         return substr($hash, 0, 60);
     }
 
 
-    function generateID(){
+    function generateID() {
         while (true) {
             #generate 10 digit unique id
             $id = mt_rand(10 ** 8, (10 ** 9) - 1);
@@ -73,8 +70,7 @@ class Database
     }
 
 
-    function checkConn()
-    {
+    function checkConn() {
         if ($this->conn) {
             echo "Connected";
         } else {
