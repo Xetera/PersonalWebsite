@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8bf16d-a5dc-4a49-82ee-cfe7e6d58ca6" name="Default" comment="f">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rover/Gallery.php" afterPath="$PROJECT_DIR$/Rover/Gallery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rover/roverJS.js" afterPath="$PROJECT_DIR$/Rover/roverJS.js" />
     </list>
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roverJS.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="roverJS.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Rover/roverJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state relative-caret-position="460">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gallery.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gallery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rover/Gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            <state relative-caret-position="552">
+              <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="46" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="false" />
               </folding>
@@ -197,8 +196,8 @@
         <option value="$PROJECT_DIR$/Rover/roverDefinitions.php" />
         <option value="$PROJECT_DIR$/Rover/Rover.php" />
         <option value="$PROJECT_DIR$/Rover/index.php" />
-        <option value="$PROJECT_DIR$/Rover/roverJS.js" />
         <option value="$PROJECT_DIR$/Rover/Gallery.php" />
+        <option value="$PROJECT_DIR$/Rover/roverJS.js" />
       </list>
     </option>
   </component>
@@ -405,12 +404,12 @@
       <workItem from="1512126808779" duration="874000" />
       <workItem from="1512642940962" duration="4215000" />
       <workItem from="1512894665334" duration="1003000" />
-      <workItem from="1513414919873" duration="28310000" />
+      <workItem from="1513414919873" duration="30069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309390000" />
+    <option name="totallyTimeSpent" value="311149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -757,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rover/roverDefinitions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -781,11 +772,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rover/roverJS.js">
+    <entry file="file://$PROJECT_DIR$/Rover/roverDefinitions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="46">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rover/Gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="46" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -797,13 +798,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rover/Gallery.php">
+    <entry file="file://$PROJECT_DIR$/Rover/roverJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="460">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

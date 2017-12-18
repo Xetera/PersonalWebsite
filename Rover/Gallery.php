@@ -46,14 +46,14 @@ class Gallery
         // need a way to confirm the http response before we echo the result
         $output = curl_exec($c);
         curl_close($c);
-        
+
 
         $json = json_decode($output);
         // loop array
         foreach ($json as $item){
             // loop dict
             foreach ($item as $key => $value){
-                array_push($this->activePics, $item[$key]['img_src']);
+                array_push($this->activePics, $item[$key]->img_src);
             }
         }
         // prints weird stuff without unescaped slashes

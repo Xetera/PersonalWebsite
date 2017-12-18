@@ -13,14 +13,15 @@ function pictures(){
         .done(function(response){
             //console.log(response);
             $('#textarea').html(response);
+            let parsed = JSON.parse(response);
 
-            for (let i of response){
+            for (let i of parsed){
                 console.log(i);
+                addPicture(i);
             }
-            //addPicture()
         })
 }
 
 function addPicture(passedURL){
-    $("<img src=`${passedURL}`>").appendTo("body");
+    $(`<img src=${passedURL}>`).appendTo("body");
 }
