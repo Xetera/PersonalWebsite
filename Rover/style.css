@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+button:focus {outline:0;}
+input:focus{outline:0;}
+
+.image {
+    max-width: 400px;
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.button {
+    font-family: Roboto;
+    font-size: 20px;
+    position: relative;
+    border-radius: 5px;
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #ab3c3c;
+    box-shadow: 0 0 #ab3c3c;
+    left: calc(50% - 100px);
+
+
+}
+
+#image-holder {
+    position: absolute;
+    left: calc(50% - 200px);
+}
+
+#search {
+    border-radius: 10px;
+    width: 400px;
+    margin-bottom: 5px;
+}

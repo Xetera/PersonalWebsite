@@ -13,15 +13,19 @@ function pictures(){
         .done(function(response){
             //console.log(response);
             $('#textarea').html(response);
+            // response is str
             let parsed = JSON.parse(response);
 
             for (let i of parsed){
                 console.log(i);
+
+                // this will be called upon reaching the end of scroll
                 addPicture(i);
             }
         })
 }
 
 function addPicture(passedURL){
-    $(`<img src=${passedURL}>`).appendTo("body");
+    // gonna be adding classes to specify its size when adding to the infinite scroll
+    $(`<img src=${passedURL} class="image">`).appendTo("#image-holder");
 }
