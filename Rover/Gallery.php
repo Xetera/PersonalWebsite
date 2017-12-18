@@ -31,10 +31,6 @@ class Gallery
         $this->sol = $sol;
     }
 
-    public function requestRover(){
-        return "Pink Elephant";
-    }
-
     function contactAPI($pageNumber) {
         /* requests without page numbers take an eternity, and even with them it feels long
         * so we probably need to query the server and cache the results before the user reaches
@@ -50,7 +46,9 @@ class Gallery
         // need a way to confirm the http response before we echo the result
         $output = curl_exec($c);
         curl_close($c);
-        $json = json_decode($output, JSON_PRETTY_PRINT);
+        
+
+        $json = json_decode($output);
         // loop array
         foreach ($json as $item){
             // loop dict
@@ -58,9 +56,7 @@ class Gallery
                 array_push($this->activePics, $item[$key]['img_src']);
             }
         }
-        echo print_r($this->activePics);
-        //echo "Loading...";
-        //echo $json;
-
+        // prints weird stuff without unescaped slashes
+        echo json_encode($this->activePics, JSON_UNESCAPED_SLASHES);
     }
 }

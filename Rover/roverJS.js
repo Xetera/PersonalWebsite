@@ -11,8 +11,12 @@ function toTheRover(){
 function pictures(){
     $.post('Gallery.php', {pageNumber:1})
         .done(function(response){
-            console.log(response);
+            //console.log(response);
             $('#textarea').html(response);
+
+            for (let i of response){
+                console.log(i);
+            }
             //addPicture()
         })
 }
