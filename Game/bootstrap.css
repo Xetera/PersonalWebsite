@@ -50,11 +50,12 @@ body {
     height: 100%;
 }
     #middle-container{
-        display:flex;
-        flex-direction: column;
+
     }
         #middle-flex {
             height: 100%;
+            display:flex;
+            flex-direction: column;
         }
         #header {
             width: 100%;
@@ -65,7 +66,8 @@ body {
             margin-bottom: 10px;
         }
             #title {
-                display: table;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
             }
                 #title-text{
                     display:table-cell;
@@ -82,10 +84,13 @@ body {
 
         #middle-grid {
             display:grid;
+            background-color: #C1CEFE;
+            height: calc(100% - 15%);
         }
 
             #description {
-                height: 5%;
+                background-color: #C1CEFE;
+                padding: 5px;
             }
     #right-container{
 

@@ -6,7 +6,9 @@ class Upgrades {
         this.displayList = {}; // we will dynamically add new elements into this as they get created
         this.allUpgrades = [];
     }
-
+    get amount(){
+        return Object.keys(this.displayList).length;
+    }
     display(name, upgrade){
         this.displayList[name] = upgrade;
         // creating a new element dynamically

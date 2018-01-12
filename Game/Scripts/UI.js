@@ -1,5 +1,34 @@
+let keywords = [
+  "more food", "more wood", "more stone"
+];
+
 function getDimensions(){
     return [$(window).width(), $(window).height()];
+}
+
+function parseDescription(str){
+    let lines = str.split('\\n');
+    let display ="";
+    /*
+    for (let i in lines){
+        for (let word in keywords){
+            let keyword = new RegExp(`${keywords[word]}`, 'i');
+            let match = lines[i].match(keyword);
+            console.log(match);
+            if (match){
+                console.log(keyword);
+                lines[i].replace(keywords[word], '<p style="color: green;">'+ keywords[word] +'</p>')
+            }
+        }
+    }
+    */
+    for (let i in lines){
+        display += '<p> ' +  lines[i] + '</p>';
+    }
+    console.log(display);
+    console.log(str);
+    console.log(lines);
+    $('#description').html(display)
 }
 
 
@@ -8,6 +37,7 @@ $(document).ready(function() {
     let upgrades = $('#upgrades');
     // this height is going to change for every available upgrade
     let height = getDimensions()[1] * 0.7;
+    let height = upgrades.amount * 40;
     let headerHeight = 50;
 
     function closeUpgrades(){
@@ -31,12 +61,14 @@ $(document).ready(function() {
         });
     });
 
+
+    // displaying tooltips
     $('.upgrade').hover(function(){
         $(this).css('cursor', 'pointer');
-        console.log($(this).attr('aria-label'));
         // we might want to send this to a handler and check for \n with regex and make a new line dynamically
         // or something like that
-        $('#description').html($(this).attr('aria-label'));
+        let title = $(this).attr('aria-label');
+        parseDescription(title);
         // we don't want to directly set this to empty on hover out, we might want a cookie
         // clicker type scrolling text of random shit later
     }, closeUpgrades);
