@@ -1,3 +1,4 @@
+
 html, body {
     height:100%;
     width: 100%;
@@ -7,6 +8,10 @@ body {
     margin: 5px;
     background-color: #624CAB !important;
     padding: 15px;
+}
+.unselectable {
+    user-select: none;
+
 }
 .display {
     margin:5px;
@@ -48,10 +53,32 @@ body {
         display:flex;
         flex-direction: column;
     }
-        #title {
-            height: 10%;
+        #middle-flex {
+            height: 100%;
+        }
+        #header {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-gap: 10px;
+            height:10%;
             margin-bottom: 10px;
         }
+            #title {
+                display: table;
+            }
+                #title-text{
+                    display:table-cell;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                }
+                #title-image {
+                    margin: 0 15px;
+                    max-height: 80px;
+                    max-width: 80px;
+                    left: 0;
+                    vertical-align: center;
+                }
 
         #middle-grid {
             display:grid;
@@ -63,11 +90,42 @@ body {
     #right-container{
 
     }
-        #upgrades{
+        #upgrade-handle {
+            padding: 10px;
+            height: 50px;
+            background-color: #7189FF;
+            text-align: center;
+            line-height: 30px;
+        }
+        #upgrades-container{
             background-color: rebeccapurple;
-            height: 5%;
+            height: 50px;
 
         }
+            .upgrade {
+                display: flex;
+                flex-direction: row;
+                padding: 5px;
+                background-color: #fa2300;
+                width: 100%;
+                max-height: 15%;
+            }
+                .upgrade-image {
+                    max-width: 40px;
+                    max-height: 40px;
+                }
+                .upgrade-text {
+                    margin: 0 auto;
+                    vertical-align: middle;
+                    line-height: 35px;
+                }
+            #upgrades {
+                margin: 5px;
+                height: 85%;
+                display: none;
+            }
+
+
 #resource-display-header {
     height: 3%
 }

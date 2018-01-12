@@ -58,6 +58,7 @@ $database = new Database();
     <script language="javascript" src="Scripts/Empire.js"></script>
     <script language="javascript" src="Scripts/Upgrades.js"></script>
     <script language="javascript" src="Scripts/Save.js"></script>
+    <script language="javascript" src="Scripts/UI.js"></script>
     <script language="javascript" src="Scripts/Runtime.js"></script>
 
 </HEAD>
@@ -118,9 +119,23 @@ $database = new Database();
             <progress id="progress-bar" class="spawn" value="0" max="100"></progress><br/>
         </div>
     </div>
+
+
     <div id="middle-container" class="">
         <div id="middle-flex">
-            <div id="title" class="cont large-container"> HELLO </div>
+
+            <div id="header">
+                <div id="stats-left"></div>
+                <div style="display:flex;">
+
+                    <div id="title" class="cont large-container">
+                        <img src="images/colloseum.png" id="title-image">
+                        <div id="title-text">An Empire Through Time</div>
+                    </div>
+                </div>
+                <div id="stats-right"></div>
+            </div>
+
             <div id="middle-grid" class="cont large-contaier">
                 <div id="description" class="display">asd</div>
             </div>
@@ -130,8 +145,17 @@ $database = new Database();
     </div>
 
     <div id="right-container" class="cont large-container">
-        <div id="upgrades">
-            <div class="upgrade"></div>
+        <div id="upgrades-container">
+            <div id="upgrade-handle">UPGRADES</div>
+            <div id="upgrades">
+                <div class="upgrade" aria-label="Your tribe is blessed with the gift of bountiful hunts by gods that do not yet exist. \n
+                Every hunter generates 0.02 more Food.">
+                    <img src="images/archery.png" class="upgrade-image">
+                    <div class="upgrade-text unselectable">Blessing of the Hunt</div>
+                    <img src="images/book.png" class="upgrade-image">
+                    <div class="upgrade-text unselectable">50<span class="upgrade-text unselectable"> Knowledge</span></div>
+                </div>
+            </div>
         </div>
         <form method="post">
             <button id="logout" class="btn btn-blue genBtn" name="logout"> Logout </button>
