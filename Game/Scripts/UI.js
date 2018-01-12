@@ -34,10 +34,11 @@ function parseDescription(str){
 
 $(document).ready(function() {
     // here are the things that are going to run once the window loaded
+
     let upgrades = $('#upgrades');
     // this height is going to change for every available upgrade
     let height = getDimensions()[1] * 0.7;
-    let height = upgrades.amount * 40;
+    //let height = upgrades.amount * 40;
     let headerHeight = 50;
 
     function closeUpgrades(){
@@ -54,7 +55,7 @@ $(document).ready(function() {
     },
         function(){    // mouse is unhovered
         $(this).stop().animate({
-            height: 50 + 'px'
+            height: 60 + 'px'
         }, function(){ // closing animation is over
             upgrades.css('display', 'none');
             upgrades.css('height', headerHeight);

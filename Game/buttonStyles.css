@@ -15,6 +15,7 @@ a.btn.btn-blue {
     border-color: rgba(0,0,0,0.3);
     text-shadow: 0 1px 0 rgba(0,0,0,0.5);
     color: #FFF;
+    margin: 0 auto;
 }
 
 a.btn.btn-blue:hover {

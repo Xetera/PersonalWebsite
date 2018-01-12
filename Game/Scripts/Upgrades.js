@@ -13,14 +13,15 @@ class Upgrades {
         this.displayList[name] = upgrade;
         // creating a new element dynamically
         let newUpgrade = $(
-            `<tr id="${name}" class="upgrade" title="${upgrade.description}">
-                <td><img src="${upgrade.icon}" class="icon"></td>
-                <td>${name}</td>
-                <td><img src="images/book.png" class="icon" style="margin-right: 10px;"></td>
-                <td>${upgrade.cost}</td>
-            </tr>`
+            `<div id="${name}" class="upgrade" aria-label="${upgrade.description}" onclick="allUpgrades[${name}].run()">
+                <img src="${upgrade.icon}" class="upgrade-image">
+                <div class="upgrade-text unselectable">${name}</div>
+                <img src="images/book.png" class="upgrade-image">
+                <div class="unselectable upgrade-text">${upgrade.cost}
+                <span class="upgrade-text unselectable">Knowledge</span></div>
+            </div>`
         );
-        newUpgrade.appendTo($('#upgradeTable'));
+        newUpgrade.appendTo($('#upgrades'));
     }
 
     purchaseUpgrade(name){

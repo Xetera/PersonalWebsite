@@ -141,10 +141,12 @@ function increment(material, type){
 
 }
 function numberize(){
-
     // convert number to engineering notation here
 }
 
+$(function(){
+    upgrades.display('Blessing of Fertility', "Blessing of Fertility")
+});
 
 window.setInterval(() => {
     // the game runs on one big setInterval (except save) to avoid having to keep track
@@ -191,7 +193,7 @@ window.setInterval(() => {
     $('#woodCount').html(wood.total.toFixed(1));
     $('#stoneCount').html(stone.total.toFixed(1));
 
-    $('#hunterCount').html(hunter.total);
+    $('.hunterCount').html(hunter.total);
     $('#farmerCount').html(farmer.total);
     $('#lumberjackCount').html(lumberjack.total);
 
