@@ -15,6 +15,7 @@ class Generator {
         }
         empire.unemployed -= amount;
         this.total += amount;
+
     }
 
     remove(amount){
@@ -36,14 +37,6 @@ class Hunter extends Generator{
 
 }
 
-let dis = function(){
-    function delet(dis){
-        delete(dis);
-    }
-    delet(dis);
-    this.text = "I die for my niggas, I ride my niggas";
-    delete this;
-};
 
 
 class Farmer extends Generator{

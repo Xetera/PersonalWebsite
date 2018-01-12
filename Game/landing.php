@@ -53,38 +53,38 @@ $database = new Database();
     <script language="javascript" src="Scripts/Empire.js"></script>
     <script language="javascript" src="Scripts/Upgrades.js"></script>
     <script language="javascript" src="Scripts/Save.js"></script>
-    <script language="javascript" src="Runtime.js"></script>
+    <script language="javascript" src="Scripts/Runtime.js"></script>
 </HEAD>
 <body>
     <div id="allResources">
     <div id="divResourceCounter">
-    <table id="resourceCounter" class="table" cellspacing="1" cellpadding="7">
-        <tr id="foodRow">
-            <td>
-                <img src="images/wheat.png" onclick="increment('food','click');" class="icon">
-            </td>
-            <td id="foodCount">0</td>
-            <td id="foodPerSecond"  align="right">0</td>
-            <td align="left">Food/s</td>
-        </tr>
-        <tr id="woodRow" style="display: none;">
-            <td>
+    <div id="resourceCounter" class="table" cellspacing="1" cellpadding="7">
+        <div id="foodRow">
+            <div>
+                <img src="images/wheat.png" class="icon">
+            </div>
+            <div id="foodCount">0</div>
+            <div id="foodPerSecond"  align="right">0</div>
+            <div align="left">Food/s</div>
+        </div>
+        <div id="woodRow" style="display: none;">
+            <div>
                 <img src="images/log.png" class="icon">
-            </td>
-            <td id="woodCount">0</td>
-            <td id="woodPerSecond" align="right">0</td>
-            <td align="left">Wood/s</td>
-        </tr>
-        <tr id="stoneRow" style="display: none;">
-            <td>
+            </div>
+            <div id="woodCount">0</div>
+            <div id="woodPerSecond" align="right">0</div>
+            <div align="left">Wood/s</div>
+        </div>
+        <div id="stoneRow" style="display: none;">
+            <div>
                 <img src="images/stones.png" class="icon">
-            </td>
-            <td id="stoneCount">0</td>
-            <td id="stonePerSecond" align="right">0</td>
-            <td align="left">Stone/s</td>
-        </tr>
+            </div>
+            <div id="stoneCount">0</div>
+            <div id="stonePerSecond" align="right">0</div>
+            <div align="left">Stone/s</div>
+        </div>
 
-    </table>
+    </div>
     </div>
 
     <!-- RESOURCES -->

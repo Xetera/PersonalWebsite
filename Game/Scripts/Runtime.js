@@ -148,24 +148,30 @@ function numberize(){
 $(document).ready(function() {
     // here are the things that are going to run once the window loaded
 
-    upgrades.display('Blessing of The Hunt', allUpgrades['Blessing of The Hunt']);
-
-    print("save-message", "Hey! game saves are now a feature but expect your save data to get wiped as new features are added.\n");
     // ------- hovers -------
-    $('#upgradesTableParent').hover(() => {
-        $('#upgradeTable').show();
-        $('#arrow').hide();
-        $('#logout').show();
-        $('#upgradesTableParent').removeClass('glow'); // glow will be applied if new
-    }, () => {
-        $('#arrow').show();
-        $('#logout').hide();
-        $('#upgradeTable').hide();
+    $('#upgrades').hover(function(){
+        $(this).animate({
+            height: 200 + 'px'
+        },
+        function(){
+            $(this).animate({
+                height: 50 + 'px'
+            })
+        })
+    });
+
+    //upgrades.display('Blessing of The Hunt', allUpgrades['Blessing of The Hunt']);
+
+    //print("save-message", "Hey! game saves are now a feature but expect your save data to get wiped as new features are added.\n");
+
+
+
+    $('.tltp').hover(()=>{
+        $('selector').css('cursor', 'pointer');
+        $('#description').innerHTML = 'hello';
     });
 
     // we want a tooltip for anything that has a title in it, this only includes upgrades so far]
-
-
 });
 
 
@@ -339,7 +345,7 @@ window.setInterval(() => {
         }
     });
 
-},tick); // 10 fps boysss
+}, tick); // 10 fps boysss
 
 
 

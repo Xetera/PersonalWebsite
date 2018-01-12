@@ -1,0 +1,37 @@
+a.btn:hover {
+    background-color: #e3e3e3;
+    border-color: rgba(0,0,0,0.5);
+}
+.disabled, .disabled:hover {
+    background-color: gray;
+}
+a.btn:active {
+    background-color: #CCC;
+    border-color: rgba(0,0,0,0.9);
+}
+
+a.btn.btn-blue {
+    background: linear-gradient(#7bb1cb, #4f86a5);
+    border-color: rgba(0,0,0,0.3);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #FFF;
+}
+
+a.btn.btn-blue:hover {
+    background-color: #4F87A2;
+    border-color: rgba(0,0,0,0.5);
+}
+
+a.btn.btn-blue:active {
+    background-color: #3C677B;
+    border-color: rgba(13, 15, 31, 0.9);
+}
+progress.spawn {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 5px #5f807e;
+    border-radius: 10px;
+}
+progress.spawn::-webkit-progress-value{
+    background: #43A047;
+}

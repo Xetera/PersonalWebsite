@@ -18,9 +18,9 @@ function pictures(){
 
             for (let i of parsed){
                 console.log(i);
-
                 // this will be called upon reaching the end of scroll
-                addPicture(i);
+                addPicture(i)
+
             }
         })
 }
@@ -28,4 +28,6 @@ function pictures(){
 function addPicture(passedURL){
     // gonna be adding classes to specify its size when adding to the infinite scroll
     $(`<img src=${passedURL} class="image">`).appendTo("#image-holder");
+    console.log('0');
 }
+//pictures();

@@ -36,6 +36,9 @@ if (isset($_POST['rover'])){
     header("Location:Rover\\index.php");
 }
 
+if(isset($_POST['untangle'])){
+    header("Location:Untangle\\landing.php");
+}
 ?>
 
 <!Doctype HTML>
@@ -52,6 +55,7 @@ if (isset($_POST['rover'])){
                 <button type="submit" name="logout" value="logout">Logout</button>
                 <button type="submit" name="game" value="game"> Go to Game </button>
                 <button type="submit" name="rover" value="rover">Go to Rover</button>
+                <button type="submit" name="untangle" value="untangle">To Untangle</button>
             </form>
         </div>
     </body>

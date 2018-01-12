@@ -4,15 +4,19 @@ button:focus {outline:0;}
 input:focus{outline:0;}
 
 .image {
+    border-color: #00fafa;
     max-width: 400px;
     display: block;
     width: auto;
     height: auto;
     margin-bottom: 5px;
 }
+body {
+    background: linear-gradient(to left, #b865b5, #c295ba);
+}
 
 .button {
-    font-family: Roboto;
+    font-family: Helvetica;
     font-size: 20px;
     position: relative;
     border-radius: 5px;
@@ -21,15 +25,18 @@ input:focus{outline:0;}
     cursor: pointer;
     margin-bottom: 10px;
     background-color: #ab3c3c;
-    box-shadow: 0 0 #ab3c3c;
     left: calc(50% - 100px);
 
 
 }
 
 #image-holder {
+    background: #d0545a;
+    padding: 60px;
+    border-radius: 10px;
     position: absolute;
-    left: calc(50% - 200px);
+    top: 10%;
+    left: calc(50% - 260px);
 }
 
 #search {
