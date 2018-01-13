@@ -1,6 +1,6 @@
 class Generator {
     // these values will almost all be overridden
-    constructor(name,multiplier){
+    constructor(name, multiplier){
         this.name = name; // not sure if this is even necessary
         this.total = 0;
         this.mult = multiplier;
@@ -10,19 +10,27 @@ class Generator {
 
     add(amount){
         //we're checking whether we have enough unemployed people that we can assign to farming
-        if (empire.unemployed - amount < 0){
+        let multipliedAmount = generatorMult * amount;
+        if (empire.unemployed - multipliedAmount < 0){
+            this.total += empire.unemployed;
+            empire.unemployed -= empire.unemployed;
             return;
         }
-        empire.unemployed -= amount;
-        this.total += amount;
+        empire.unemployed -= multipliedAmount;
+        this.total += multipliedAmount;
 
     }
 
     remove(amount){
-        if (this.total > 0){
-            this.total -= amount;
-            empire.unemployed += amount;
+        let multipliedAmount = generatorMult * amount;
+        if (this.total - multipliedAmount < 0){
+            this.total -= this.total;
+            empire.unemployed += this.total;
+            return;
         }
+        this.total -= multipliedAmount;
+        empire.unemployed += multipliedAmount;
+
     }
 }
 
@@ -38,7 +46,6 @@ class Hunter extends Generator{
 }
 
 
-
 class Farmer extends Generator{
     constructor(){
         super("farmer", 1.2); // values subject to change
@@ -51,3 +58,8 @@ class Lumberjack extends Generator {
     }
 }
 
+class Miner extends Generator {
+    constructor(){
+        super('miner', 1.0);
+    }
+}

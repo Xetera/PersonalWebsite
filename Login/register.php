@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('C:\\xamppnew\\htdocs\\database.php');
+require_once('C:\\xamppnew\\Website\\database.php');
 #require_once('login.php');
 
 $database = new Database();

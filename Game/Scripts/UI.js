@@ -2,6 +2,10 @@ let keywords = [
   "more food", "more wood", "more stone"
 ];
 
+let mouseLocation = {
+    x: 0,
+    y: 0
+};
 function getDimensions(){
     return [$(window).width(), $(window).height()];
 }
@@ -25,9 +29,7 @@ function parseDescription(str){
     for (let i in lines){
         display += '<p> ' +  lines[i] + '</p>';
     }
-    console.log(display);
-    console.log(str);
-    console.log(lines);
+
     $('#description').html(display)
 }
 
@@ -49,11 +51,60 @@ function openTab(name, ref){
     tabs.removeClass('btn-primary');
 
     $('#' + name + 'tab').addClass('btn-primary');
-
 }
 
-$(document).ready(function() {
+
+function focusMultiplierButtons(btn){
+    let buttons = $('#generatorMultiplier > button');
+    buttons.removeClass('btn-primary');
+    btn.addClass('btn-primary');
+}
+
+
+
+
+
+function updateAllImages(targetClass, image){
+    targetClass = $('.' + targetClass);
+    targetClass.attr('src', image);
+}
+
+function updateUIValues(){
+    $('#foodCount').html(food.total.toFixed(1));
+    $('#woodCount').html(wood.total.toFixed(1));
+    $('#stoneCount').html(stone.total.toFixed(1));
+
+    $('.foodWorker').each(function(){
+        $(this).html(hunter.total);
+    });
+
+    $('.woodWorker').each(function(){
+        $(this).html(lumberjack.total);
+    });
+
+    $('.foodCap').each(function(){
+        $(this).html(food.cap);
+    });
+
+    $('.woodCap').each(function(){
+        $(this).html(wood.cap);
+    });
+
+    $('#lumberjackCount').html(lumberjack.total);
+
+    $('#tentCount').html(tent.total);
+
+    $('#population').html(empire.population);
+    $('#maxPopulation').html(empire.maxPopulation);
+
+
+    // ---- per second -------
+
+}
+$(function() {
     // here are the things that are going to run once the window loaded
+
+
 
 
 
@@ -88,6 +139,7 @@ $(document).ready(function() {
 
     // displaying tooltips
     $('.upgrade').hover(function(){
+        tooltip.create('hello', 'my dude');
         $(this).css('cursor', 'pointer');
         // we might want to send this to a handler and check for \n with regex and make a new line dynamically
         // or something like that
@@ -111,7 +163,13 @@ $(document).ready(function() {
     // we want a tooltip for anything that has a title in it, this only includes upgrades so far]
 
     $('.tabcontent').on('click', function(name, ref){
-        ref.preventDefault();
+        if (!$(name).hasClass('tabcontent')) return;
+        console.log(name);
         openTab(name, ref);
+    });
+
+    $('#generatorMultiplier :button').click(()=>{
+        focusMultiplierButtons($(this));
     })
+
 });

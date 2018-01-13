@@ -9,8 +9,9 @@ class Upgrades {
     get amount(){
         return Object.keys(this.displayList).length;
     }
-    display(name, upgrade){
-        this.displayList[name] = upgrade;
+    display(name){
+        this.displayList[name] = allUpgrades[name];
+        let upgrade = this.displayList[name];
         // creating a new element dynamically
         let newUpgrade = $(
             `<div id="${name}" class="upgrade" aria-label="${upgrade.description}" onclick="allUpgrades['${name}'].run()">

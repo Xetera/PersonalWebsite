@@ -5,6 +5,7 @@
 *
 *  Also, if you're reading this congratz! You really know your inspect element.
 */
+
 const tick = 50; // TODO: move consts to it's own file to load in the html header
 const second = 1000;
 
@@ -13,8 +14,8 @@ const second = 1000;
 let empire = new Empire();
 
 
-let food = new Resource(0);
-let wood = new Resource(0);
+let food = new Food(0);
+let wood = new Wood(0);
 let stone = new Resource(0);
 let knowledge = new Resource(0);
 
@@ -22,6 +23,8 @@ let knowledge = new Resource(0);
 let hunter = new Hunter();
 let farmer = new Farmer();
 let lumberjack = new Lumberjack();
+
+let generatorMult = 1;
 
 let tent = new Tent();
 
@@ -69,7 +72,7 @@ function notification(text){
         'left':randPos+'px',
         'bottom':'-150px',
         'display':'none'
-    }).appendTo( 'body' ).fadeIn(100);
+    }).appendTo('body').fadeIn(100);
     newNotification.animate({'bottom': '100'}).delay(1700).animate({'bottom': '-150'});
     setTimeout(function() {
         newNotification.remove();
@@ -87,6 +90,7 @@ function sendTimestamp(){
 
     notification("Game saved! [" + hour + ":" + minute + "]");
 }
+
 function toggleAutoAssign(){
     let text = $('#toggleAutoAssign');
     if (text.html() === 'Turn off Autoassign'){
@@ -104,12 +108,6 @@ function toggleAutoAssign(){
 }
 
 
-function tickValue(a){
-    // the game feels very laggy when it updates once a second so we want to make sure every value that we're
-    // adding to the counter shows 1/10th of it's actual value but gets updated 10 times faster
-    let division = second/tick;
-    return a/division;
-}
 
 
 function increment(material, type){
@@ -146,7 +144,7 @@ function numberize(){
 
 
 $(function(){
-    upgrades.display('Blessing of Fertility', "Blessing of Fertility")
+    //upgrades.display('Blessing of Fertility');
 });
 
 window.setInterval(() => {
@@ -165,7 +163,7 @@ window.setInterval(() => {
     let popWoodConsumption = empire.population * empire.woodConsumption;
 
     // it would make sense for these calculations to be a part of resources
-    let hunterTick =  seasonMultiplier * (hunter.total * hunter.mult);
+    let hunterTick = seasonMultiplier * (hunter.total * hunter.mult);
     let farmerTick = seasonMultiplier * (farmer.total * farmer.mult);
 
 
@@ -190,21 +188,9 @@ window.setInterval(() => {
         // numbers and keep track of the # of ticks they've been in the red for so we can start killing off population
         food.total = 0;
     }
-    $('#foodCount').html(food.total.toFixed(1));
-    $('#woodCount').html(wood.total.toFixed(1));
-    $('#stoneCount').html(stone.total.toFixed(1));
 
-    $('.hunterCount').html(hunter.total);
-    $('#farmerCount').html(farmer.total);
-    $('#lumberjackCount').html(lumberjack.total);
+    updateUIValues();
 
-    $('#tentCount').html(tent.total);
-
-    $('#population').html(empire.population);
-    $('#maxPopulation').html(empire.maxPopulation);
-
-
-    // ---- per second -------
     $('#foodPerSecond').html(foodTick.toFixed(1));
     $('#woodPerSecond').html((lumberjack.total * lumberjack.mult).toFixed(1));
     //$('#stoneperSecond').html(miner.total * lumberjack.mult).toFixed(1);
@@ -307,17 +293,6 @@ window.setInterval(() => {
         tentWoodCost.css('color', 'green')
     }
 
-    //---------upgrades --------------
-
-    $('#upgradeTable').delegate('tr', 'click', function() {
-        for (let i in upgrades.displayList){
-            if (upgrades.displayList[i]['name'] === $(this).prop('id')){
-                upgrades.displayList[i].run();
-                break;
-            }
-
-        }
-    });
 
 }, tick); // 10 fps boysss
 
