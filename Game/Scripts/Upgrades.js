@@ -13,7 +13,7 @@ class Upgrades {
         this.displayList[name] = upgrade;
         // creating a new element dynamically
         let newUpgrade = $(
-            `<div id="${name}" class="upgrade" aria-label="${upgrade.description}" onclick="allUpgrades[${name}].run()">
+            `<div id="${name}" class="upgrade" aria-label="${upgrade.description}" onclick="allUpgrades['${name}'].run()">
                 <img src="${upgrade.icon}" class="upgrade-image">
                 <div class="upgrade-text unselectable">${name}</div>
                 <img src="images/book.png" class="upgrade-image">
@@ -60,8 +60,8 @@ let allUpgrades = {
         name: 'Blessing of Fertility',
         icon: 'images/UpgradeIcons/family.png',
         description:
-        'Your tribe is blessed with the gift of increased fertility by gods that do not yet exist.<br/>' +
-        '20% faster citizen creation.',
+            'Your tribe is blessed with the gift of increased fertility by gods that do not yet exist.<br/>' +
+            '20% faster citizen creation.',
         cost: 10,
         run: function(){
             empire.spawnMultiplier = empire.spawnMultiplier - (empire.spawnMultiplier * 0.2);

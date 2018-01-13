@@ -144,6 +144,7 @@ function numberize(){
     // convert number to engineering notation here
 }
 
+
 $(function(){
     upgrades.display('Blessing of Fertility', "Blessing of Fertility")
 });

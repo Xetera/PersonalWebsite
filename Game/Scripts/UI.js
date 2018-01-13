@@ -31,9 +31,31 @@ function parseDescription(str){
     $('#description').html(display)
 }
 
+function openTab(name, ref){
+    // Hide all elements with class="tabcontent" by default */
+    let tabcontent;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    // Show the specific tab content
+
+    let destination = $('#' + name);
+    console.log(destination);
+    destination.css('display', "block");
+
+    let tabs = $('.tablink');
+    // no need to create loops when selecting classes with jQuery
+    tabs.removeClass('btn-primary');
+
+    $('#' + name + 'tab').addClass('btn-primary');
+
+}
 
 $(document).ready(function() {
     // here are the things that are going to run once the window loaded
+
+
 
     let upgrades = $('#upgrades');
     // this height is going to change for every available upgrade
@@ -42,6 +64,7 @@ $(document).ready(function() {
     let headerHeight = 50;
 
     function closeUpgrades(){
+        // we'll end up updating this later on
         $('#description').html("");
     }
     // ------- hovers -------
@@ -86,4 +109,9 @@ $(document).ready(function() {
     });
 
     // we want a tooltip for anything that has a title in it, this only includes upgrades so far]
+
+    $('.tabcontent').on('click', function(name, ref){
+        ref.preventDefault();
+        openTab(name, ref);
+    })
 });

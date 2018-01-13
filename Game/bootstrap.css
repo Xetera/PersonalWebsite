@@ -14,7 +14,7 @@ body {
     padding: 15px;
 }
 
-.unselectable {
+.unselectable * {
     user-select: none;
 }
 
@@ -58,6 +58,18 @@ body {
 .large-container {
     padding: 5px;
 }
+
+#tabcontainer {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    height: 100%;
+}
+    .tablink {
+        background-color: #C1CEFE;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
 #main {
     display:grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -73,7 +85,7 @@ body {
             height: 100%;
             display:grid;
             grid-template-columns: 100%;
-            grid-template-rows: 1fr 7fr;
+            grid-template-rows: 0.5fr 0.2fr 7fr;
         }
         #header {
             width: 100%;
@@ -106,16 +118,30 @@ body {
         #middle-grid {
             display:grid;
             background-color: #C1CEFE;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
         }
-            .generators-grid {
-                display:grid;
-                grid-template-rows: repeat(4, 1fr);
-                grid-template-columns: 50%;
+            #generators-container {
             }
+                .generators-grid {
+                    display:grid;
+                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-columns: 100%;
+                }
+
                 .generator-row {
                     display: grid;
                     grid-template-rows: 100%;
                     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                }
+            #buildings-container {
+            }
+                .buildings-grid {
+                    display:grid;
+                    grid-template-rows: repeat(10, 1fr);
+                    width: 100%;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
                 }
 
 

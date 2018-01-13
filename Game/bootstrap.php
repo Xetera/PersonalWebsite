@@ -67,15 +67,18 @@ $database = new Database();
 <!------------------------ BODY --------------------------->
 <body>
 <div id="main">
+    <!----------LEFT --------->
     <div id="left-container" class="cont large-container">
         <div class="display-parent">
             <div class="display-text display-title">POPULATION</div>
             <div id="population-display" class="large-container display">
-                <img src="images/population.png" class="display-image-large tltp">
-                <progress id="progress-bar" class="spawn" value="0" max="100"></progress><br/>
+                <div class="population-display-row">
+                    <img src="images/population.png" class="upgrade-image">
+                    <progress id="progress-bar" class="spawn" value="0" max="100"></progress><br/>
+                </div>
             </div>
         </div>
-        <div id="resources" class="display-parent">
+        <div id="resources" class="display-parent unselectable">
             <div class="display-text display-title">RESOURCES</div>
             <div id="resource-display-header" class="display">
                 <div class="resource-display-row">
@@ -126,10 +129,9 @@ $database = new Database();
 
 
 
-
+    <!----------- MIDDLE ---------->
     <div id="middle-container" class="">
         <div id="middle-parent">
-
             <div id="header">
                 <div id="stats-left"></div>
                 <div style="display:flex;">
@@ -142,27 +144,78 @@ $database = new Database();
                 </div>
                 <div id="description" ></div>
             </div>
-
-            <div id="middle-grid" class="cont large-container">
-                <div id="generators-container">
-                    <div class="generators-grid">
-                        <div id="hunterGroup" class="cont large-container generator-row">
-                            <img src="images/archery.png" class="display-image">
-                            <span>Hunter</span>
-                            <a class="btn btn-blue genBtn" href="#" id="removeHunter" onmousedown="hunter.remove(1)"> < </a>
-                            <div class="hunterCount"></div>
-                            <a class="btn btn-blue genBtn" href="#" id="addHunter" onmousedown="hunter.add(1)"> > </a>
+            <div id="tabcontainer">
+                <button id='createtab' class="tablink btn-primary" onclick="openTab('create', this)">Create</button>
+                <button id='TODOtab' class="tablink" onmousedown="openTab('TODO', this)">TODO</button>
+            </div>
+            <div id="create" class="tabcontent cont large-container">
+                <div id="middle-grid" class="cont large-container">
+                    <div id="generators-container">
+                        <div class="display-parent">
+                            <div class="generators-grid"">
+                            <div id="hunterGroup" class="cont large-container generator-row">
+                                <img src="images/archery.png" class="display-image">
+                                <span>Hunter</span>
+                                <a class="btn btn-blue genBtn" href="#" id="removeHunter" onmousedown="hunter.remove(1)"> < </a>
+                                <div class="hunterCount"></div>
+                                <a class="btn btn-blue genBtn" href="#" id="addHunter" onmousedown="hunter.add(1)"> > </a>
+                            </div>
+                            <div id="lumberjackGroup" class="cont large-container generator-row">
+                                <img src="images/lumberjack.png" class="display-image">
+                                <span>Lumberjack</span>
+                                <a class="btn btn-blue genBtn" href="#" id="addLumberjack" onmousedown="lumberjack.remove(1)"> < </a>
+                                <div class="lumberjackCount"></div>
+                                <a class="btn btn-blue genBtn" href="#" id="removeLumberjack" onmousedown="lumberjack.add(1)"> > </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="buildings-container">
+                    <div class="display-parent">
+                        <div class="buildings-grid cont large-container">
+                            <img class="display-image" id="tentIcon" src="images/tent.png">
+                            <a class="btn btn-blue genBtn" href="#" id="buyTent" onmousedown="buyTent(1);">Build a Tent</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
             </div>
+
+        <div id="TODO" class="tabcontent cont large-container" style="display:none">
+            <div class="cont large-container">
+                <ul>
+                    <li>Prevent the browser from caching JS files in while in debug mode</li>
+                    <li>Move Population display to the header</li>
+                    <li>Display time left until next spawn in population</li>
+                    <li>Create a generator (worker) display section in #left-container</li>
+                    <li>Make a season system that interacts with resources and generators</li>
+                    <li>Add random chance events like immigration and traders</li>
+                    <li>Expand worker spawn to take up a larger portion of the screen</li>
+                    <li>Add starvation</li>
+                    <li>Make upgrades "peekable" where the user has goals to reach</li>
+                    <li>Redo entire upgrades system including its (nonworking) dynamic calls</li>
+                    <li>Add unemployed to the workers display</li>
+                    <li>Eventually give users ability to mass-assign professions like 10x or 100x</li>
+                    <li>Implement knowledge system for game advancement</li>
+                    <li>Run number assignments through a parser that converts large values to engineering notation</li>
+                    <li>Add color coded (red - green) income levels to let users know their current situation</li>
+                    <li>Move away from a clicking based system to something more fun</li>
+                    <li>Achievements?</li>
+                    <li>Overhaul price increase algorithm to somethin that's not linear</li>
+                </ul>
+            </div>
+        </div>
+
         </div>
 
     </div>
 
 
 
-
+    <!--------------RIGHT------------->
     <div id="right-container" class="">
         <div id="right-body" class="cont large-container">
             <div id="upgrades-container" class=" cont large-container">
@@ -188,7 +241,7 @@ $database = new Database();
         </div>
 
     </div>
-</div>
+
 
 </body>
 </html>
