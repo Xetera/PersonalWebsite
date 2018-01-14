@@ -144,8 +144,6 @@ $(function() {
         let id = $(this).attr('aria-label');
         let index = allUpgrades.findIndex(e => e.id === parseInt(id));
         let upgrade = allUpgrades[index];
-        console.log(id);
-        console.log(upgrade);
         help.create(upgrade, this);
         $(this).css('cursor', 'pointer');
 
@@ -162,16 +160,10 @@ $(function() {
     //print("save-message", "Hey! game saves are now a feature but expect your save data to get wiped as new features are added.\n");
 
 
-    $('.tltp').hover(()=>{
-        $('selector').css('cursor', 'pointer');
-
-    });
-
     // we want a tooltip for anything that has a title in it, this only includes upgrades so far]
 
     $('.tabcontent').on('click', function(name, ref){
         if (!$(name).hasClass('tabcontent')) return;
-        console.log(name);
         openTab(name, ref);
     });
 

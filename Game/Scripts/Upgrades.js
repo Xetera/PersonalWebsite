@@ -30,7 +30,7 @@ class Upgrades {
         this.availableUpgrades.push(upgrade);
         // creating a new element dynamically
         let newUpgrade = $(
-            `<div id="upgrade${upgrade.id}" class="upgrade" aria-label="${upgrade.id}">
+            `<div id="upgrade${upgrade.id}" class="upgrade" aria-label="${upgrade.id}" onclick="upgrades.buy(this)">
                 <img src="${upgrade.icon}" class="upgrade-image">
                 <div class="upgrade-text unselectable">${upgrade.name}</div>
                 <img src="images/knowledge.png" class="upgrade-image">
@@ -46,19 +46,40 @@ class Upgrades {
         }
     }
 
-    buy(id){
-        const upgrade = this.availableUpgrades.findIndex(e=> e.id===id);
-        if (!upgrade) return;
+    static isBuyable(upg){
+        for (let i in upg.costs){
+            if (resources[i].total - upg.costs[i] < 0) return false;
+        }
+        return true;
+    }
+    buy(dom){
+        let id = $(dom).attr('aria-label');
+        const index = this.availableUpgrades.findIndex(e=> e.id===parseInt(id));
+        const upgrade = this.availableUpgrades[index];
+        if(!Upgrades.isBuyable(upgrade)) {
+            log.warning('Not enough resources for purchase');
+            return;
+        }
+
+        if (!upgrade) {
+            log.error('Purchase unsuccessful');
+            return;
+        }
+        for (let i in upgrade.costs){
+            resources[i].subtract(upgrade.costs[i]);
+        }
+
         upgrade.run();
-        this.purchaseUpgrade(id)
+        this.purchased += 1;
+        Upgrades.removeUpgrade(id)
     }
 
-    purchaseUpgrade(id){
-        this.purchased += 1;
+    static removeUpgrade(id){
         let upgrade = $('#upgrade' + id);
         // lets add an an animation to this before we remove it from the DOM so it looks nicer
         upgrade.remove();
     }
+
     update(){
         for (let i in this.availableUpgrades){
             let upgrade = this.findUpgradeDOM(this.availableUpgrades[i].id);
@@ -108,7 +129,9 @@ let allUpgrades = [
         costs: {
             food: 100
         },
-        run: function(){}
+        run: function(){
+            alert('hello');
+        }
     },
     {
         id: 2,

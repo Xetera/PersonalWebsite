@@ -35,7 +35,6 @@ let help = {
         let costs = this.costs;
 
         //looping through costs and appending them to the tooltip properly
-        console.log(upgrade.costs);
         for (let key in upgrade.costs){
             let value = upgrade.costs[key];
             this.updateHelpCost(key, value);
@@ -67,7 +66,6 @@ let help = {
         }
     },
     create: function(obj, parent){
-        console.log(obj);
         if (obj.type === 'upgrade'){
             this.effect = obj.effect;
             this.story = obj.story;

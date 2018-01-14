@@ -9,3 +9,14 @@ function tickValue(a){
 function upgradesIsOpen(){
     return $('#upgrades-container').height() > 80;
 }
+
+log = {};
+log.error = function(str){
+    if (!debug) return;
+    console.log('%c[ERROR]: ' + str, "color:red");
+};
+
+log.warning = function(str){
+    if (!debug) return;
+    console.log('%c[WARNING]: ' + str, 'color:orange');
+};

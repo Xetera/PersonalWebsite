@@ -9,6 +9,7 @@
 const tick = 50; // TODO: move consts to it's own file to load in the html header
 const second = 1000;
 
+const debug = true;
 // ------ initializing instances ---------
 
 let empire = new Empire();
