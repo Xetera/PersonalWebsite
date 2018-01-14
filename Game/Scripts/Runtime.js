@@ -268,6 +268,7 @@ window.setInterval(() => {
 
 
 
+
     // ------- resource showing --------
     // gain access to more resources after x amount of farmers to avoid overwhelming the player
     if (farmer.total > 2 || hunter.total > 2) {
@@ -284,6 +285,7 @@ window.setInterval(() => {
     let tentWoodCost = $('#tentWoodCost');
     tentFoodCost.html(tent.foodCost.toFixed(1));
     tentWoodCost.html(tent.woodCost.toFixed(1));
+
     if (food.total < tentFoodCost.html()){
         tentFoodCost.css('color','red');
     }

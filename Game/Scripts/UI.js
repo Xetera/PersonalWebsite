@@ -95,6 +95,28 @@ function updateUIValues(){
         $(this).html(empire.unemployed);
     });
 
+
+    if (food.total >= food.cap){
+        $('.foodCap').css('color', '#c71e2d');
+    }
+    else{
+        $('.foocCap').css('color', 'black');
+    }
+
+    if (wood.total >= wood.cap){
+        $('.woodCap').css('color', '#c71e2d');
+    }
+    else{
+        $('.woodCap').css('color', 'black');
+    }
+
+    if (stone.total >= stone.cap){
+        $('.stoneCap').css('color', '#c71e2d');
+    }
+    else{
+        $('.stoneCap').css('color', 'black');
+    }
+
     $('#lumberjackCount').html(lumberjack.total);
 
     $('#tentCount').html(tent.total);
