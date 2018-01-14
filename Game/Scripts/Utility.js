@@ -7,5 +7,5 @@ function tickValue(a){
 
 
 function upgradesIsOpen(){
-    return $('#upgrades').height() > 60;
+    return $('#upgrades-container').height() > 80;
 }

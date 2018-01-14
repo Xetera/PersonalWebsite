@@ -5,6 +5,7 @@ class Upgrades {
         this.newUpgrades = 0;
         this.availableUpgrades = [];
         this.displayedDOMElements = [];
+        this.notification = `<div id="notification-circle"></div>`
     }
 
     get amount(){
@@ -69,27 +70,48 @@ class Upgrades {
             upgrade.addClass('glow');
         }
         let handle = $('#upgrade-handle');
-        if (!handle.hasClass('gradient-flow')){
-            handle.addClass('gradient-flow');
+        if (!handle.hasClass('gradient-flow')) handle.addClass('gradient-flow');
+
+        if (!handle.children().length > 0){
+            $(this.notification).appendTo(handle).html(this.newUpgrades.toString());
         }
-        if (!handle.hasClass('notification-circle')){
-            handle.addClass('notification-circle').html(this.newUpgrades.toString());
-        }
-        else if (handle.hasClass('notification-circle')){
-            handle.find('.notification-circle').html(this.newUpgrades.toString());
+        else if (handle.children().length > 0){
+            $('#notification-circle').html(this.newUpgrades.toString());
         }
     }
+    removeUpgradeNotification(element){
+        let handle = $('#upgrade-handle');
+        let notifications = $('#notification-circle');
+        this.newUpgrades--;
+        $(element).removeClass('glow');
+        if (this.newUpgrades === 0){
+            this.resetUpgradeNotifications();
+            return;
+        }
+        notifications.html(this.newUpgrades.toString());
+    }
+
     resetUpgradeNotifications(){
         let handle = $('#upgrade-handle');
         handle.removeClass('gradient-flow');
-        handle.removeClass('notification-circle');
+        $('#notification-circle').remove();
     }
 }
 
 let allUpgrades = [
     {
         id: 1,
-        type: 'upgrade',
+        name: "Curiousity",
+        icon: "images/UpgradeIcons/unemployed.svg",
+        story: "It's a great world out there, who knows what could become of it.",
+        effect: "+0.1 Knowledge/s",
+        costs: {
+            food: 100
+        },
+        run: function(){}
+    },
+    {
+        id: 2,
         name: 'Blessing of The Hunt',
         icon: 'images/UpgradeIcons/javelin-throw.png',
         story: 'Your tribe is blessed with the gift of bountiful hunts by gods that do not yet exist.',
@@ -115,8 +137,7 @@ let allUpgrades = [
         }
     },
     {
-        id: 2,
-        type: 'upgrade',
+        id: 3,
         name: 'Blessing of Fertility',
         icon: 'images/UpgradeIcons/family.png',
         story:'Your tribe is blessed with the gift of increased fertility by gods that do not yet exist',
@@ -128,6 +149,18 @@ let allUpgrades = [
             empire.spawnMultiplier = empire.spawnMultiplier - (empire.spawnMultiplier * 0.2);
             empire.spawnInterval -= empire.spawnInterval*0.2
         }
+    },
+
+    {
+        id: 5,
+        name: "Farsight",
+        icon: 'images/UpgradeIcons/farsight.gif',
+        story: "Your tribe is now better at anticipating events and outcomes",
+        effect: "You can now see upcoming upgrades and events",
+        costs: {
+            knowledge: 10
+        },
+        run: function(){}
     }
 ];
 

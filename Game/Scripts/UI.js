@@ -90,6 +90,10 @@ function updateUIValues(){
         $(this).html(wood.cap);
     });
 
+    $('.unemployedWorker').each(function(){
+        $(this).html(empire.unemployed);
+    });
+
     $('#lumberjackCount').html(lumberjack.total);
 
     $('#tentCount').html(tent.total);
@@ -124,8 +128,8 @@ $(function() {
         upg.css('display', 'block');
         // controlling for padding
         upg.css('height', height -  headerHeight - 2 * 5);
-    },
-        function(){    // mouse is unhovered
+
+    },function(){    // mouse is unhovered
         $(this).stop().animate({
             height: 60 + 'px'
         }, function(){ // closing animation is over
@@ -144,7 +148,9 @@ $(function() {
         console.log(upgrade);
         help.create(upgrade, this);
         $(this).css('cursor', 'pointer');
-        if ($(this).hasClass('glow')) $(this).removeClass('glow');
+
+        upgrades.removeUpgradeNotification($(this));
+
     }, function() { //unhovered
         closeUpgrades();
         help.destroy()

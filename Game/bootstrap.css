@@ -1,11 +1,11 @@
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bitter', sans-serif;
 }
 html, body {
     height:100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bitter', sans-serif;
 }
 
 body {
@@ -16,6 +16,10 @@ body {
 .header span {
     text-align: center;
     line-height: 1;
+}
+
+.centered {
+    text-align: center;
 }
 
 .unselectable * {
@@ -201,6 +205,9 @@ body {
             border-radius: 10px;
 
         }
+        #upgrades {
+            height: 60px;
+        }
 
             .upgrade {
                 display: flex;
@@ -279,20 +286,24 @@ body {
         .help-cost{
             display:flex;
             flex: 1;
+            vertical-align: middle;
             line-height: 3;
-            margin-bottom: 0;
+            margin-bottom: 4px;
+            background-color: #743073;
         }
         .help-image {
             max-width: 30px;
             max-height: 30px;
             float:left;
-            margin: 5px;
+            margin: auto 5px auto;
+        }
+        .help-cost > .help-image {
         }
 
         .help-story{
             padding: 1px;
             background-color: #9b59b6;
-            margin-bottom: 4px;
+            margin-bottom: 0;
         }
         .help-text{
             margin: 0 auto;

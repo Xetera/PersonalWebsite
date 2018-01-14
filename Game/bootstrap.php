@@ -43,15 +43,16 @@ $database = new Database();
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="buttonStyles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 
     <!-- DEPENDENCIES-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 
     <!-- GAME FILES -->
@@ -65,6 +66,7 @@ $database = new Database();
     <script language="javascript" src="Scripts/Save.js"></script>
     <script language="javascript" src="Scripts/Runtime.js"></script>
     <script language="javascript" src="Scripts/UI.js"></script>
+    <script language="javscript" src="Scripts/Story.js"></script>
 
 
 
@@ -132,7 +134,7 @@ $database = new Database();
         </div>
         <div>
             <div class="display-parent unselectable">
-                <div class="display-text display-title">Workers</div>
+                <div class="display-text display-title">WORKERS</div>
                 <div class="generator-display-row display header">
                     <span>Worker</span>
                     <span>Icon</span>
@@ -140,13 +142,20 @@ $database = new Database();
                 </div>
                 <div id="generators-display" class="display">
                     <div id="unemployedRow" class="generator-display-row">
+                        <span class="display-text">Unemployed</span>
+                        <img src="images/unemployed.png" class="display-image">
+                        <div class="unemployedWorker display-text"></div>
+                    </div>
+                    <div id="foodGathererRow" class="generator-display-row">
                         <span class="display-text">Hunter</span>
                         <img src="images/archery.png" class="display-image">
                         <div class="foodWorker display-text"></div>
                     </div>
-                    <div id="foodWorkerRow" class="generator-display-row">123</div>
-                    <div id="woodWorkerRow" class="generator-display-row">123</div>
-                    <div id="stoneWorkerRow" class="generator-display-row">123</div>
+                    <div id="unemployedRow" class="generator-display-row">
+                        <span class="display-text">Lumberjack</span>
+                        <img src="images/lumberjack.png" class="display-image">
+                        <div class="woodWorker display-text"></div>
+                    </div>
                 </div>
             </div>
         </div>

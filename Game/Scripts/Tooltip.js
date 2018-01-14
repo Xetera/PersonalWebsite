@@ -38,8 +38,6 @@ let help = {
         console.log(upgrade.costs);
         for (let key in upgrade.costs){
             let value = upgrade.costs[key];
-            console.log(key , value);
-            console.log(costs);
             this.updateHelpCost(key, value);
             let resource;
             if (key === 'food'){
@@ -83,6 +81,7 @@ let help = {
                         <div class="help-name help-text">${obj.name}</div>
 
                     </div>
+                    <span class="centered">COSTS</span>
                     <div class="help-cost">
                        
                     </div>

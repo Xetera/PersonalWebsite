@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8bf16d-a5dc-4a49-82ee-cfe7e6d58ca6" name="Default" comment="f">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Game/Scripts/Story.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Empire.js" afterPath="$PROJECT_DIR$/Game/Scripts/Empire.js" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Generators.js" afterPath="$PROJECT_DIR$/Game/Scripts/Generators.js" />
-      <change beforePath="$PROJECT_DIR$/Game/Scripts/Resources.js" afterPath="$PROJECT_DIR$/Game/Scripts/Resources.js" />
       <change beforePath="$PROJECT_DIR$/Game/Scripts/Runtime.js" afterPath="$PROJECT_DIR$/Game/Scripts/Runtime.js" />
       <change beforePath="$PROJECT_DIR$/Game/Scripts/Tooltip.js" afterPath="$PROJECT_DIR$/Game/Scripts/Tooltip.js" />
       <change beforePath="$PROJECT_DIR$/Game/Scripts/UI.js" afterPath="$PROJECT_DIR$/Game/Scripts/UI.js" />
@@ -13,12 +11,7 @@
       <change beforePath="$PROJECT_DIR$/Game/Scripts/Utility.js" afterPath="$PROJECT_DIR$/Game/Scripts/Utility.js" />
       <change beforePath="$PROJECT_DIR$/Game/bootstrap.css" afterPath="$PROJECT_DIR$/Game/bootstrap.css" />
       <change beforePath="$PROJECT_DIR$/Game/bootstrap.php" afterPath="$PROJECT_DIR$/Game/bootstrap.php" />
-      <change beforePath="$PROJECT_DIR$/Game/buttonStyles.css" afterPath="$PROJECT_DIR$/Game/buttonStyles.css" />
-      <change beforePath="$PROJECT_DIR$/Game/images/book.png" afterPath="$PROJECT_DIR$/Game/images/knowledge.png" />
-      <change beforePath="$PROJECT_DIR$/Game/images/log.png" afterPath="$PROJECT_DIR$/Game/images/wood.png" />
-      <change beforePath="$PROJECT_DIR$/Game/images/stones.png" afterPath="$PROJECT_DIR$/Game/images/stone.png" />
-      <change beforePath="$PROJECT_DIR$/Game/images/wheat.png" afterPath="$PROJECT_DIR$/Game/images/food.png" />
-      <change beforePath="$PROJECT_DIR$/Game/landing.php" afterPath="$PROJECT_DIR$/Game/landing.php" />
+      <change beforePath="$PROJECT_DIR$/Game/images/unemployed.svg" afterPath="$PROJECT_DIR$/Game/images/UpgradeIcons/unemployed.svg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +55,8 @@
       <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="58" column="68" lean-forward="true" selection-start-line="58" selection-start-column="68" selection-end-line="58" selection-end-column="68" />
+            <state relative-caret-position="486">
+              <caret line="157" column="26" lean-forward="true" selection-start-line="157" selection-start-column="26" selection-end-line="157" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -72,8 +65,18 @@
       <file leaf-file-name="Runtime.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Runtime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1911">
-              <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+            <state relative-caret-position="-457">
+              <caret line="196" column="15" lean-forward="true" selection-start-line="196" selection-start-column="15" selection-end-line="196" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Story.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/Scripts/Story.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,21 +85,21 @@
       <file leaf-file-name="Utility.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Utility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="207">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UI.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UI.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/UI.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="146" column="45" lean-forward="false" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
+            <state relative-caret-position="491">
+              <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
               <folding>
-                <marker date="1515915966620" expanded="true" signature="610:623" ph="..." />
-                <marker date="1515915966620" expanded="true" signature="2456:2739" ph="{...}" />
+                <marker date="1515928507356" expanded="true" signature="610:623" ph="..." />
+                <marker date="1515928507356" expanded="true" signature="2550:2833" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -105,14 +108,14 @@
       <file leaf-file-name="Tooltip.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Tooltip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="90" column="12" lean-forward="false" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+            <state relative-caret-position="414">
+              <caret line="83" column="48" lean-forward="false" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="48" />
               <folding>
-                <marker date="1515913083323" expanded="true" signature="2553:3073" ph="..." />
-                <marker date="1515913083323" expanded="true" signature="2591:2984" ph="..." />
-                <marker date="1515913083323" expanded="true" signature="2637:2782" ph="..." />
-                <marker date="1515913083323" expanded="true" signature="2637:2808" ph="..." />
-                <marker date="1515913083323" expanded="true" signature="2852:2903" ph="..." />
+                <marker date="1515928455890" expanded="true" signature="2483:3059" ph="..." />
+                <marker date="1515928455890" expanded="true" signature="2521:2970" ph="..." />
+                <marker date="1515928455890" expanded="true" signature="2567:2712" ph="..." />
+                <marker date="1515928455890" expanded="true" signature="2567:2738" ph="..." />
+                <marker date="1515928455890" expanded="true" signature="2838:2889" ph="..." />
               </folding>
             </state>
           </provider>
@@ -121,11 +124,11 @@
       <file leaf-file-name="Upgrades.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Upgrades.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="503">
+              <caret line="105" column="74" lean-forward="false" selection-start-line="105" selection-start-column="74" selection-end-line="105" selection-end-column="74" />
               <folding>
-                <marker date="1515915917845" expanded="true" signature="1015:1341" ph="..." />
-                <marker date="1515915917845" expanded="true" signature="1015:1381" ph="..." />
+                <marker date="1515927848542" expanded="true" signature="1082:1408" ph="..." />
+                <marker date="1515927848542" expanded="true" signature="1082:1448" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,8 +137,18 @@
       <file leaf-file-name="Generators.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="621">
               <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="288" column="35" lean-forward="false" selection-start-line="288" selection-start-column="35" selection-end-line="288" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -144,28 +157,8 @@
       <file leaf-file-name="Resources.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Scripts/Resources.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
+            <state relative-caret-position="2001">
               <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Game/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="196" column="9" lean-forward="false" selection-start-line="196" selection-start-column="9" selection-end-line="196" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buttonStyles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/buttonStyles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -227,7 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Login/javascript.js" />
         <option value="$PROJECT_DIR$/Login/login.js" />
         <option value="$PROJECT_DIR$/Game/landing.html" />
         <option value="$PROJECT_DIR$/Login/login.css" />
@@ -270,14 +262,15 @@
         <option value="$PROJECT_DIR$/Game/Scripts/Empire.js" />
         <option value="$PROJECT_DIR$/Game/Scripts/Generators.js" />
         <option value="$PROJECT_DIR$/Game/Scripts/Resources.js" />
-        <option value="$PROJECT_DIR$/Game/Scripts/Runtime.js" />
-        <option value="$PROJECT_DIR$/Game/Scripts/Tooltip.js" />
-        <option value="$PROJECT_DIR$/Game/Scripts/Utility.js" />
-        <option value="$PROJECT_DIR$/Game/bootstrap.php" />
-        <option value="$PROJECT_DIR$/Game/Scripts/Upgrades.js" />
         <option value="$PROJECT_DIR$/Game/buttonStyles.css" />
-        <option value="$PROJECT_DIR$/Game/Scripts/UI.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Utility.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Runtime.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Story.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Upgrades.js" />
         <option value="$PROJECT_DIR$/Game/bootstrap.css" />
+        <option value="$PROJECT_DIR$/Game/bootstrap.php" />
+        <option value="$PROJECT_DIR$/Game/Scripts/Tooltip.js" />
+        <option value="$PROJECT_DIR$/Game/Scripts/UI.js" />
       </list>
     </option>
   </component>
@@ -427,16 +420,16 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xamppnew/htdocs/Game/Scripts/UI.js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xamppnew\htdocs\Rover" />
-      <recent name="C:\xamppnew\htdocs\Game" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xamppnew\htdocs\Game\images\UpgradeIcons" />
       <recent name="C:\xamppnew\htdocs\Game\Scripts" />
       <recent name="C:\xamppnew\htdocs\Game" />
       <recent name="C:\xamppnew\htdocs\Untangle" />
       <recent name="C:\xamppnew\htdocs\Game\images" />
-      <recent name="C:\xamppnew\htdocs\Game\images\UpgradeIcons" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xamppnew\htdocs\Rover" />
+      <recent name="C:\xamppnew\htdocs\Game" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -525,12 +518,12 @@
       <workItem from="1515826691112" duration="36000" />
       <workItem from="1515826893546" duration="8873000" />
       <workItem from="1515838335744" duration="6993000" />
-      <workItem from="1515875307377" duration="24718000" />
+      <workItem from="1515875307377" duration="29431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="423644000" />
+    <option name="totallyTimeSpent" value="428357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -540,7 +533,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29270834" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3275862" sideWeight="0.5021322" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5021322" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.116145834" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
@@ -576,14 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/applications.html" />
-    <entry file="file://$PROJECT_DIR$/Login/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main.css" />
     <entry file="file://$PROJECT_DIR$/index.php" />
     <entry file="file://$PROJECT_DIR$/xampp/login.js" />
@@ -699,95 +684,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
+    <entry file="file://$PROJECT_DIR$/Game/buttonStyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="343">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game/images/UpgradeIcons/unemployed.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Game/Scripts/Resources.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
+        <state relative-caret-position="2001">
           <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/buttonStyles.css">
+    <entry file="file://$PROJECT_DIR$/Game/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="371">
+          <caret line="288" column="35" lean-forward="false" selection-start-line="288" selection-start-column="35" selection-end-line="288" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/bootstrap.php">
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Generators.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="58" column="68" lean-forward="true" selection-start-line="58" selection-start-column="68" selection-end-line="58" selection-end-column="68" />
+        <state relative-caret-position="621">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Utility.js">
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Upgrades.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Runtime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1911">
-          <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/UI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="146" column="45" lean-forward="false" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
+        <state relative-caret-position="503">
+          <caret line="105" column="74" lean-forward="false" selection-start-line="105" selection-start-column="74" selection-end-line="105" selection-end-column="74" />
           <folding>
-            <marker date="1515915966620" expanded="true" signature="610:623" ph="..." />
-            <marker date="1515915966620" expanded="true" signature="2456:2739" ph="{...}" />
+            <marker date="1515927848542" expanded="true" signature="1082:1408" ph="..." />
+            <marker date="1515927848542" expanded="true" signature="1082:1448" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/Scripts/Tooltip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="90" column="12" lean-forward="false" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+        <state relative-caret-position="414">
+          <caret line="83" column="48" lean-forward="false" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="48" />
           <folding>
-            <marker date="1515913083323" expanded="true" signature="2553:3073" ph="..." />
-            <marker date="1515913083323" expanded="true" signature="2591:2984" ph="..." />
-            <marker date="1515913083323" expanded="true" signature="2637:2782" ph="..." />
-            <marker date="1515913083323" expanded="true" signature="2637:2808" ph="..." />
-            <marker date="1515913083323" expanded="true" signature="2852:2903" ph="..." />
+            <marker date="1515928455890" expanded="true" signature="2483:3059" ph="..." />
+            <marker date="1515928455890" expanded="true" signature="2521:2970" ph="..." />
+            <marker date="1515928455890" expanded="true" signature="2567:2712" ph="..." />
+            <marker date="1515928455890" expanded="true" signature="2567:2738" ph="..." />
+            <marker date="1515928455890" expanded="true" signature="2838:2889" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Scripts/Upgrades.js">
+    <entry file="file://$PROJECT_DIR$/Game/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <marker date="1515915917845" expanded="true" signature="1015:1341" ph="..." />
-            <marker date="1515915917845" expanded="true" signature="1015:1381" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="196" column="9" lean-forward="false" selection-start-line="196" selection-start-column="9" selection-end-line="196" selection-end-column="9" />
+        <state relative-caret-position="486">
+          <caret line="157" column="26" lean-forward="true" selection-start-line="157" selection-start-column="26" selection-end-line="157" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Runtime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="196" column="15" lean-forward="true" selection-start-line="196" selection-start-column="15" selection-end-line="196" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Story.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/Utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/Scripts/UI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+          <folding>
+            <marker date="1515928507356" expanded="true" signature="610:623" ph="..." />
+            <marker date="1515928507356" expanded="true" signature="2550:2833" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -150,7 +150,6 @@ function numberize(){
 $(function(){
     upgrades.display(1);
     upgrades.display(2);
-
 });
 
 window.setInterval(() => {
@@ -205,7 +204,7 @@ window.setInterval(() => {
     // checking for game progress and showing items dynamically
 
 
-
+    console.log(upgradesIsOpen());
     //------------SPAWNING WORKERS --------------------
     if (empire.population < empire.maxPopulation){
         // we add 0.1 (tick/second) since that's the tick we're running on
