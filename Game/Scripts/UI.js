@@ -57,7 +57,8 @@ function openTab(name, ref){
 function focusMultiplierButtons(btn){
     let buttons = $('#generatorMultiplier > button');
     buttons.removeClass('btn-primary');
-    btn.addClass('btn-primary');
+    console.log($(btn));
+    $(btn).addClass('btn-primary');
 }
 
 
@@ -167,8 +168,9 @@ $(function() {
         openTab(name, ref);
     });
 
-    $('#generatorMultiplier :button').click(()=>{
+    $('.genMultBtn').click(function(){
         focusMultiplierButtons($(this));
+        $('#currentGeneratorMultiplier > span').html(`x${generatorMult}`);
     })
 
 });

@@ -190,10 +190,12 @@ $database = new Database();
                 <div id="middle-grid" class="cont large-container">
                     <div id="generators-container">
                         <div id="generatorMultiplier">
-                            <button class="btn btn-blue btnGen btn-primary" onclick="generatorMult = 1">1x</button>
-                            <button class="btn btn-blue btnGen" onclick="generatorMult = 10">10x</button>
-                            <button class="btn btn-blue btnGen" onclick="generatorMult = 100">100x</button>
-                            <button class="btn btn-blue btnGen" onclick="generatorMult = 1000">1000x</button>
+                            <button class="genMultBtn btn btn-blue btnGen btn-primary" onclick="generatorMult = 1">1x</button>
+                            <button class="genMultBtn btn btn-blue btnGen" onclick="generatorMult = 10">10x</button>
+                            <button class="genMultBtn btn btn-blue btnGen" onclick="generatorMult = 100">100x</button>
+                            <button class="genMultBtn btn btn-blue btnGen" onclick="generatorMult = 'MAX'">MAX</button>
+
+                            <div id="currentGeneratorMultiplier"><span>x1</span></div>
                         </div>
                         <div class="display-parent">
                             <div class="generators-grid"">

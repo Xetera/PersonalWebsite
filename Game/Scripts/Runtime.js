@@ -205,7 +205,6 @@ window.setInterval(() => {
     // checking for game progress and showing items dynamically
 
 
-    console.log(upgradesIsOpen());
     //------------SPAWNING WORKERS --------------------
     if (empire.population < empire.maxPopulation){
         // we add 0.1 (tick/second) since that's the tick we're running on
