@@ -78,3 +78,16 @@ class Stone extends Resource {
         }
     }
 }
+
+class Knowledge extends Resource{
+    constructor(total){
+        super(total);
+        this.income = {
+            passive: 1,
+            knowledgeWorker: 0
+        }
+    }
+    passiveIncome(){
+        this.total += tickValue(this.income.passive);
+    }
+}

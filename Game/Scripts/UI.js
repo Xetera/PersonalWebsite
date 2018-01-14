@@ -99,16 +99,14 @@ function updateUIValues(){
 
 
     // ---- per second -------
-
 }
+
 $(function() {
     // here are the things that are going to run once the window loaded
 
 
 
-
-
-    let upgrades = $('#upgrades');
+    let upg = $('#upgrades');
     // this height is going to change for every available upgrade
     let height = getDimensions()[1] * 0.7;
     //let height = upgrades.amount * 40;
@@ -123,31 +121,34 @@ $(function() {
         $(this).stop().animate({
             height: height + 'px'
         });
-        upgrades.css('display', 'block');
+        upg.css('display', 'block');
         // controlling for padding
-        upgrades.css('height', height -  headerHeight - 2 * 5);
+        upg.css('height', height -  headerHeight - 2 * 5);
     },
         function(){    // mouse is unhovered
         $(this).stop().animate({
             height: 60 + 'px'
         }, function(){ // closing animation is over
-            upgrades.css('display', 'none');
-            upgrades.css('height', headerHeight);
+            upg.css('display', 'none');
+            upg.css('height', headerHeight);
         });
     });
 
 
     // displaying tooltips
     $('.upgrade').hover(function(){
-        tooltip.create('hello', 'my dude');
+        let id = $(this).attr('aria-label');
+        let index = allUpgrades.findIndex(e => e.id === parseInt(id));
+        let upgrade = allUpgrades[index];
+        console.log(id);
+        console.log(upgrade);
+        help.create(upgrade, this);
         $(this).css('cursor', 'pointer');
-        // we might want to send this to a handler and check for \n with regex and make a new line dynamically
-        // or something like that
-        let title = $(this).attr('aria-label');
-        parseDescription(title);
-        // we don't want to directly set this to empty on hover out, we might want a cookie
-        // clicker type scrolling text of random shit later
-    }, closeUpgrades);
+        if ($(this).hasClass('glow')) $(this).removeClass('glow');
+    }, function() { //unhovered
+        closeUpgrades();
+        help.destroy()
+    });
 
 
     //upgrades.display('Blessing of The Hunt', allUpgrades['Blessing of The Hunt']);

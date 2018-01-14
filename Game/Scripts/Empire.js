@@ -17,7 +17,7 @@ class Empire {
         this.spawnMultiplier = 1.03;
         this.spawnProgress = 0; // keeping track of how far we are along spawning Person
         this.percentSpawnProgress = 0;
-        
+
         this.season = Seasons.SUMMER;
 
 

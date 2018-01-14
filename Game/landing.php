@@ -61,7 +61,7 @@ $database = new Database();
     <div id="resourceCounter" class="table" cellspacing="1" cellpadding="7">
         <div id="foodRow">
             <div>
-                <img src="images/wheat.png" class="icon">
+                <img src="images/food.png" class="icon">
             </div>
             <div id="foodCount">0</div>
             <div id="foodPerSecond"  align="right">0</div>
@@ -69,7 +69,7 @@ $database = new Database();
         </div>
         <div id="woodRow" style="display: none;">
             <div>
-                <img src="images/log.png" class="icon">
+                <img src="images/wood.png" class="icon">
             </div>
             <div id="woodCount">0</div>
             <div id="woodPerSecond" align="right">0</div>
@@ -77,7 +77,7 @@ $database = new Database();
         </div>
         <div id="stoneRow" style="display: none;">
             <div>
-                <img src="images/stones.png" class="icon">
+                <img src="images/stone.png" class="icon">
             </div>
             <div id="stoneCount">0</div>
             <div id="stonePerSecond" align="right">0</div>
@@ -186,11 +186,11 @@ $database = new Database();
                 </td>
                 <td>
                     <div class="buildingCostHolder">
-                        <img class="smallicon" src="images/wheat.png"><div class="buildingCost" id="tentFoodCost">10</div>
+                        <img class="smallicon" src="images/food.png"><div class="buildingCost" id="tentFoodCost">10</div>
                     </div>
                     <br/>
                     <div class="buildingCostHolder">
-                        <img class="smallicon" src="images/log.png"><div class="buildingCost" id="tentWoodCost">10</div>
+                        <img class="smallicon" src="images/wood.png"><div class="buildingCost" id="tentWoodCost">10</div>
                     </div>
                 </td>
             </tr>

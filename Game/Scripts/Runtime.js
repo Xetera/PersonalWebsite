@@ -16,13 +16,16 @@ let empire = new Empire();
 
 let food = new Food(0);
 let wood = new Wood(0);
-let stone = new Resource(0);
-let knowledge = new Resource(0);
-
+let stone = new Stone(0);
+let knowledge = new Knowledge(0);
+// setting them in arrays for referencing later
+let resources = [food, wood, stone, knowledge];
 
 let hunter = new Hunter();
 let farmer = new Farmer();
 let lumberjack = new Lumberjack();
+
+
 
 let generatorMult = 1;
 
@@ -143,8 +146,11 @@ function numberize(){
 }
 
 
+
 $(function(){
-    //upgrades.display('Blessing of Fertility');
+    upgrades.display(1);
+    upgrades.display(2);
+
 });
 
 window.setInterval(() => {

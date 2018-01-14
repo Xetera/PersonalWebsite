@@ -26,6 +26,7 @@ require('../database.php');
 
 $database = new Database();
 // eventually we're going to be creating something here that let's us save the game and continue from where we left off
+// @* lmao already dun
 
 
 ?>
@@ -55,7 +56,6 @@ $database = new Database();
 
     <!-- GAME FILES -->
     <script language="javascript" src="Scripts/Resources.js"></script>
-    <script language="javascript" src="Scripts/UI.js"></script>
     <script language="javascript" src="Scripts/Tooltip.js"></script>
     <script language="javascript" src="Scripts/Utility.js"></script>
     <script language="javascript" src="Scripts/Buildings.js"></script>
@@ -64,6 +64,8 @@ $database = new Database();
     <script language="javascript" src="Scripts/Upgrades.js"></script>
     <script language="javascript" src="Scripts/Save.js"></script>
     <script language="javascript" src="Scripts/Runtime.js"></script>
+    <script language="javascript" src="Scripts/UI.js"></script>
+
 
 
 </HEAD>
@@ -98,7 +100,7 @@ $database = new Database();
                     <div class="display-col display-text">Food</div>
                     <div id="foodCount" class="display-col display-text"> </div>
 
-                    <img src="images/wheat.png" class="display-col display-image">
+                    <img src="images/food.png" class="display-col display-image">
                     <div class="display-col display-text"><span id="foodPerSecond"></span>/s</div>
 
                     <div class="foodCap display-text"></div>
@@ -108,7 +110,7 @@ $database = new Database();
                     <div class="display-col display-text">Wood</div>
                     <div id="woodCount" class="display-col display-text"> </div>
 
-                    <img src="images/log.png" class="display-col display-image">
+                    <img src="images/wood.png" class="display-col display-image">
 
                     <div class="display-col display-text"><span id="woodPerSecond"></span>/s</div>
                     <div class="display-text woodCap"></div>
@@ -117,13 +119,13 @@ $database = new Database();
                 <div id="stoneRow" class="resource-display-row">
                     <div class="display-col display-text">Stone</div>
                     <div id="stoneCount" class="display-col display-text"></div>
-                    <img src="images/stones.png" class="display-col display-image">
+                    <img src="images/stone.png" class="display-col display-image">
                     <div class="display-col display-text"><span id="stonePerSecond"></span>/s</div>
                 </div>
                 <div id="knowledgeRow" class="resource-display-row">
                     <div id="knowledgeCount" class="display-col display-text">Knowledge</div>
                     <div id="knowledgeCount" class="display-col display-test"></div>
-                    <img src="images/book.png" class="display-col display-image">
+                    <img src="images/knowledge.png" class="display-col display-image">
                     <div class="display-col display-text"><span id="knowledgePerSecond"></span>/s</div>
                 </div>
             </div>
@@ -173,6 +175,7 @@ $database = new Database();
             <div id="tabcontainer">
                 <button id='createtab' class="tablink btn-primary" onclick="openTab('create', this)">Create</button>
                 <button id='TODOtab' class="tablink" onmousedown="openTab('TODO', this)">TODO</button>
+                <button id='Statstab' class="tablink" onmousedown="openTab('Stats', this)">Stats</button>
             </div>
             <div id="create" class="tabcontent cont large-container">
                 <div id="middle-grid" class="cont large-container">
@@ -202,16 +205,16 @@ $database = new Database();
                         </div>
                     </div>
                 </div>
-                    <div id="buildings-container">
-                        <div class="display-parent">
-                            <div class="buildings-grid cont large-container">
-                                <img class="display-image" id="tentIcon" src="images/tent.png">
-                                <a class="btn btn-blue genBtn" href="#" id="buyTent" onmousedown="buyTent(1);">Build a Tent</a>
-                            </div>
+                <div id="buildings-container">
+                    <div class="display-parent">
+                        <div class="buildings-grid cont large-container">
+                            <img class="display-image" id="tentIcon" src="images/tent.png">
+                            <a class="btn btn-blue genBtn" href="#" id="buyTent" onmousedown="buyTent(1);">Build a Tent</a>
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div id="stats" class="tabcontent cont large-container"></div>
             </div>
 
             <div id="TODO" class="tabcontent cont large-container" style="display:none">
@@ -250,14 +253,16 @@ $database = new Database();
     <div id="right-container" class="">
         <div id="right-body" class="cont large-container">
             <div id="upgrades-container" class=" cont large-container">
-                <div id="upgrade-handle">UPGRADES</div>
+                <div id="upgrade-handle" class="gradient-flow">
+                    <div id="notification-circle">1</div>UPGRADES</div>
                 <div id="upgrades">
-                    <div class="upgrade" aria-label="Your tribe is blessed with the gift of bountiful hunts by gods that do not yet exist.\nEvery hunter generates 0.02 more Food.">
+                    <!--
+                    <div id="asdds" class="upgrade" aria-label="1">
                         <img src="images/archery.png" class="upgrade-image">
                         <div class="upgrade-text unselectable">Blessing of the Hunt</div>
-                        <img src="images/book.png" class="upgrade-image">
+                        <img src="images/knowledge.png" class="upgrade-image">
                         <div class="upgrade-text unselectable">50<span class="upgrade-text unselectable"> Knowledge</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

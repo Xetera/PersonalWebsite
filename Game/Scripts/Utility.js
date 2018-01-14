@@ -4,3 +4,8 @@ function tickValue(a){
     let division = second/tick;
     return a/division;
 }
+
+
+function upgradesIsOpen(){
+    return $('#upgrades').height() > 60;
+}

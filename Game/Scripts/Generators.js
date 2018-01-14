@@ -24,8 +24,9 @@ class Generator {
     remove(amount){
         let multipliedAmount = generatorMult * amount;
         if (this.total - multipliedAmount < 0){
-            this.total -= this.total;
             empire.unemployed += this.total;
+
+            this.total -= this.total;
             return;
         }
         this.total -= multipliedAmount;
